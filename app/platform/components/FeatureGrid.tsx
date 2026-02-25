@@ -1,4 +1,5 @@
 import { BarChart3, Zap, Shield, Globe, Cpu, Layers } from "lucide-react";
+import { Container, Section } from "@/app/components/ui";
 
 const features = [
   {
@@ -35,29 +36,29 @@ const features = [
 
 export function FeatureGrid() {
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <Section className="py-24">
+      <Container>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-serif font-medium mb-4">Features built for scale</h2>
-          <p className="text-muted-foreground text-lg">
+          <h2 className="text-3xl font-serif font-light mb-4">Features built for scale</h2>
+          <p className="text-muted text-lg">
             Everything you need to manage your business operations from a single dashboard.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, i) => (
-            <div key={i} className="p-6 border rounded-2xl bg-card hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 rounded-lg bg-brand/10 text-brand flex items-center justify-center mb-6">
+            <div key={i} className="p-6 border border-border rounded-2xl bg-background hover:shadow-md transition-shadow">
+              <div className="h-12 w-12 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-6">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted leading-relaxed">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

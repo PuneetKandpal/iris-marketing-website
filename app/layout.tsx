@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
+import { fontVariables } from "./theme/fonts";
 
 export const metadata: Metadata = {
   title: "Iriscale | Platform",
@@ -27,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased font-sans flex flex-col min-h-screen`}
+        className={`${fontVariables} antialiased font-sans flex flex-col min-h-screen`}
       >
         <Header />
         <main className="flex-1">

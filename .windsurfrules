@@ -1,0 +1,37 @@
+# System Rules and Context
+
+## 1. Primary Design Guide
+
+Always reference the **[Style Guide](docs/style-guide.md)** before writing new React components, applying CSS, or adding new pages. It contains strict rules regarding:
+
+- Typography (`ABC Camera Plain` and `Flecha S`)
+- Core design tokens (colors, backgrounds, text colors)
+- Custom Headless UI components (`Button`, `Section`, `Container`)
+
+## 2. Dependencies & Stack
+
+- We use **Next.js 16** (App Router).
+- We use **Tailwind CSS v4** (`@theme` in `globals.css`).
+- We use **@headlessui/react** for unstyled accessible primitives.
+- **NEVER** use Shadcn, Radix UI, Class Variance Authority (CVA), or Tailwind Merge. They were explicitly removed.
+- **NEVER** use hardcoded hex codes for colors or explicit font names in inline classes (e.g., `text-[#FF0000]` or `font-['Arial']`). Use the defined Tailwind theme variables (`bg-background`, `text-muted`, `bg-surface`, `text-accent`, etc.).
+
+## 3. Architecture & File Structure
+
+- Page-specific components go in their respective `app/[page]/components/` folders (e.g., `app/about/components/TeamSection.tsx`).
+- Shared UI primitives go in `app/components/ui/` (e.g., `Button.tsx`, `Container.tsx`, `Section.tsx`).
+- Global layout components (Header, Footer) go in `app/components/[Name]/`.
+- Font configurations are centralized in `app/theme/fonts.ts`.
+- CSS variables are centralized in `app/globals.css`.
+
+## 4. Fonts and Weights
+
+The project relies on a variable font for sans-serif text (`ABCCameraPlainVariable.woff2`).
+
+- To adjust the weight of `font-sans`, simply use standard Tailwind font-weight classes: `font-light`, `font-normal`, `font-medium`, `font-semibold`, `font-bold`. The variable font handles the rendering automatically.
+- The serif font (`FlechaS`) is static and supports `font-light` and `font-normal` weights. It is reserved exclusively for large headings (`font-serif`).
+
+## 5. Assets
+
+- Use local SVG placeholders located in `public/images/` instead of remote URLs like `placehold.co`. This prevents `next/image` domain configuration issues and timeouts during static generation.
+

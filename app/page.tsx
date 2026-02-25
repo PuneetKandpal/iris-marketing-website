@@ -1,6 +1,6 @@
-import { Hero } from "./_home/components/Hero";
-import { LogoTicker } from "./_home/components/LogoTicker";
-import { FeatureHighlight } from "./_home/components/FeatureHighlight";
+import { Hero } from "./(pages)/_home/components/Hero";
+import { LogoTicker } from "./(pages)/_home/components/LogoTicker";
+import { FeatureHighlight } from "./(pages)/_home/components/FeatureHighlight";
 
 export default function Home() {
   return (
