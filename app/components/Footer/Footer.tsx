@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container, Section } from "@/app/components/ui";
 import Image from "next/image";
+import LogoWhite from "@/public/images/website/logo-white.png";
 
 const footerSections = [
   {
@@ -44,7 +45,7 @@ export function Footer() {
           <div className="flex justify-between items-center mb-10">
             <div className="relative w-[200px] h-[60px] md:w-[250px] md:h-[100px]">
               <Image
-                src="/images/logowhite.png"
+                src={LogoWhite}
                 alt="Iriscale Logo"
                 fill
                 className="object-contain object-left"

@@ -7,7 +7,7 @@ import { WhatyouGet } from "./(pages)/_home/components/WhatyouGet";
 import { Testimonials } from "./(pages)/_home/components/Testimonials";
 import { Faq } from "./(pages)/_home/components/Faq";
 import { WesolveStrategy } from "./(pages)/_home/components/WesolveStrategy";
-import { LatestNews } from "./(pages)/_home/components/LatestNews";
+//import { LatestNews } from "./(pages)/_home/components/LatestNews";
 
 
 export default function Home() {
@@ -21,8 +21,8 @@ export default function Home() {
       <HowIriscaleworks />
       <WesolveStrategy />
       <WhatyouGet />
-      {/* <LatestNews /> */}
-      <Faq />
+      {/* <LatestNews />
+      {/* <Faq /> */}
       
     </div>
   );

@@ -31,25 +31,27 @@ export function Hero() {
           />
         </p>
 
-        <h1 className="mx-auto max-w-4xl font-flecha-s-regular text-5xl font-normal tracking-tight sm:text-7xl">
+        <h1 className="mx-auto max-w-4xl font-flecha-s-regular text-7xl font-normal tracking-tight sm:text-7xl">
           Scale your marketing <br className="hidden sm:block" /> without
           scaling your team.
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
-          One platform replaces your entire marketing stack. Expert strategy
-          built in. Your brand voice locked in. Content that converts, created
-          in minutes instead of days.
+        <p className="mx-auto mt-6 max-w-2xl tracking-tight text-foreground sm:text-xl font-text-camera-plain-regular">
+          <span>One platform replaces your entire marketing stack. Expert</span> 
+          <br/>
+          <span>strategy built in. Your brand voice locked in. Content that</span> 
+          <br/>
+          <span>converts, created in minutes instead of days.</span> 
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button variant="accent" size="lg" className="w-full sm:w-auto">
+          <Button variant="accent" size="lg" className="w-full sm:w-auto font-camera-plain-regular">
             Try for Free
           </Button>
           <Button
             variant="outline_black"
             size="lg"
-            className="w-full sm:w-auto group"
+            className="w-full sm:w-auto group font-camera-plain-regular"
           >
             Book Demo
           </Button>
