@@ -1,49 +1,105 @@
 import Link from "next/link";
-import { Container } from "@/app/components/ui";
+import { Container, Section } from "@/app/components/ui";
+import Image from "next/image";
 
-const navLinks = ["Platform", "Pricing", "Blog", "About"];
+const footerSections = [
+  {
+    title: "Overview",
+    links: [
+      { label: "Product", href: "/product" },
+      { label: "Pricing", href: "/pricing" },
+      { label: "FAQ", href: "/faq" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Careers", href: "/careers" },
+      { label: "Other", href: "/other" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Terms of service", href: "/terms" },
+      { label: "Privacy Policy", href: "/privacy" },
+    ],
+  },
+  {
+    title: "Contact",
+    links: [
+      { label: "Email", href: "mailto:hello@iriscale.com" },
+      { label: "LinkedIn", href: "#" },
+      { label: "X / Twitter", href: "#" },
+    ],
+  },
+];
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-border bg-background mt-auto">
-      <Container className="py-12 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="flex flex-col items-center md:items-start gap-2">
-          <Link href="/" className="font-serif text-2xl font-medium tracking-tight">
-            Iriscale
-          </Link>
-          <p className="text-sm text-muted text-center md:text-left max-w-sm">
-            The next generation platform for scaling your business operations.
-          </p>
-        </div>
+    <footer>
+      <Section variant="blue" className="w-full text-white pt-24 pb-12">
+        <Container>
+          <div className="flex justify-between items-center mb-10">
+            <div className="relative w-[200px] h-[60px] md:w-[250px] md:h-[100px]">
+              <Image
+                src="/images/logowhite.png"
+                alt="Iriscale Logo"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
+            <div className="hidden md:block">
+              <div className="relative w-12 h-12 ">
+                  <Image 
+                      src="/images/vector-2.png" 
+                      alt="Iriscale Icon" 
+                      fill 
+                      className="object-contain"
+                  />
+              </div>
+            </div>
+          </div>
 
-        <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4">
-          {navLinks.map((item) => (
-            <Link
-              key={item}
-              href={`/${item.toLowerCase()}`}
-              className="text-sm text-muted hover:text-foreground transition-colors"
-            >
-              {item}
-            </Link>
-          ))}
-        </nav>
-      </Container>
+          {/* Divider Line */}
+          <div className="w-full h-px bg-white/10 mb-16" />
 
-      <div className="border-t border-border">
-        <Container className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted">
-            &copy; {new Date().getFullYear()} Iriscale Inc. All rights reserved.
-          </p>
-          <div className="flex gap-4">
-            <Link href="/privacy" className="text-sm text-muted hover:text-foreground transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-sm text-muted hover:text-foreground transition-colors">
-              Terms of Service
-            </Link>
+          {/* Bottom Section: Copyright and Nav Links */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+            {/* Copyright Info */}
+            <div className="md:col-span-5">
+              <p className="text-sm text-white">
+                © 2025 Iriscale. All rights reserved.
+              </p>
+            </div>
+
+            {/* Navigation Columns */}
+            <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-8">
+              {footerSections.map((section) => (
+                <div key={section.title} className="flex flex-col gap-4">
+                  <h4 className="text-sm font-medium text-white">
+                    {section.title}
+                  </h4>
+                  <ul className="flex flex-col gap-3">
+                    {section.links.map((link) => (
+                      <li key={link.label}>
+                        <Link 
+                          href={link.href}
+                          className="text-sm text-white"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
-      </div>
+      </Section>
     </footer>
   );
 }
