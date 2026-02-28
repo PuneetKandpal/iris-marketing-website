@@ -13,7 +13,7 @@ export function Container({
 }: ContainerProps) {
   return (
     <Tag
-      className={clsx("mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8", className)}
+      className={clsx("w-full  px-[5vw]", className)}
       {...props}
     >
       {children}

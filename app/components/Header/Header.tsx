@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { X, Menu } from "lucide-react";
 import { Button, ContainerFluid } from "@/app/components/ui";
+import Image from "next/image";
+import LogoBlack from "@/public/images/website/logo-black.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +30,7 @@ export function Header() {
             <Link
               key={item}
               href={`/${item.toLowerCase()}`}
-              className="text-sm font-medium text-muted hover:text-foreground transition-colors"
+              className="text-sm font-camera-plain-regular text-foreground transition-colors"
             >
               {item}
             </Link>

@@ -10,7 +10,6 @@ import { WesolveStrategy } from "./(pages)/_home/components/WesolveStrategy";
 import { LatestNews } from "./(pages)/_home/components/LatestNews";
 import { BuildOnce } from "./(pages)/_home/components/BuildOnce";
 
-
 export default function Home() {
   return (
     <div className="flex flex-col w-full">

@@ -36,10 +36,12 @@ export function Hero() {
           scaling your team.
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
-          One platform replaces your entire marketing stack. Expert strategy
-          built in. Your brand voice locked in. Content that converts, created
-          in minutes instead of days.
+        <p className="mx-auto mt-6 max-w-2xl tracking-tight text-foreground sm:text-xl font-text-camera-plain-regular">
+          <span>One platform replaces your entire marketing stack. Expert</span> 
+          <br/>
+          <span>strategy built in. Your brand voice locked in. Content that</span> 
+          <br/>
+          <span>converts, created in minutes instead of days.</span> 
         </p>
 
         <div className="mt-10 flex flex-row items-center justify-center gap-4">
@@ -49,7 +51,7 @@ export function Hero() {
           <Button
             variant="outline_black"
             size="lg"
-            className="w-full sm:w-auto group"
+            className="w-full sm:w-auto group font-camera-plain-regular"
           >
             Book Demo
           </Button>
