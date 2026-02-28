@@ -1,4 +1,4 @@
-import { Container, Section } from "@/app/components/ui";
+import { ContainerFluid, Section } from "@/app/components/ui";
 import Image from "next/image";
 
 const features = [
@@ -67,10 +67,10 @@ const features = [
 export function WhatyouGet() {
   return (
     <Section variant="blue" className="pt-24 pb-24 text-white">
-      <Container>
+      <ContainerFluid>
         {/* Header - Centered and Responsive Text */}
         <div className="text-center mb-16 md:mb-20 px-4">
-            <div className="inline-block border-b border-orange-500 pb-1 mb-8 "> 
+            <div className="inline-block border-b-2 border-orange-500 pb-1 mb-8 "> 
                 <span className="text-sm font-semibold uppercase relative inline-block text-white">
                 What You Get
                 </span>
@@ -108,7 +108,7 @@ export function WhatyouGet() {
             </div>
           ))}
         </div>
-      </Container>
+      </ContainerFluid>
     </Section>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Section } from "@/app/components/ui";
+import { ContainerFluid, Section } from "@/app/components/ui";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, EffectFade } from "swiper/modules";
@@ -29,20 +29,20 @@ const testimonialContent = [
 export function Testimonials() {
   return (
     <Section className="pt-24 bg-white">
-      <Container>
+      <ContainerFluid>
        
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-2 items-stretch rounded-sm overflow-hidden">
-          <div className="md:col-span-4 relative bg-white">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch rounded-sm overflow-hidden">
+          <div className="md:col-span-3 relative bg-white h-[400px] md:h-full">
             <Image
                 src="/images/union.png" 
                 alt="Static Profile"
                 fill
-                className="object-contain" // Maintains aspect ratio without stretching
+                className="object-cover object-top sm:object-contain" 
                 priority
             />
             </div>
 
-          <div className="md:col-span-8 relative">
+          <div className="md:col-span-9 relative">
             <Swiper
               modules={[Navigation, Autoplay, EffectFade]}
               spaceBetween={0}
@@ -74,7 +74,7 @@ export function Testimonials() {
                         />
                       </div>
                       
-                      <div className="text-2xl md:text-4xl lg:text-4xl font-serif text-[#112225] leading-tight tracking-tight mb-20">
+                      <div className="text-2xl md:text-4xl lg:text-4xl font-serif text-[#112225] leading-tight tracking-tight mb-5 md:mb-10 lg:mb-20">
                         “{item.quote}”
                       </div>
                     </div>
@@ -103,7 +103,7 @@ export function Testimonials() {
             </Swiper>
           </div>
         </div>
-      </Container>
+      </ContainerFluid>
     </Section>
   );
 }

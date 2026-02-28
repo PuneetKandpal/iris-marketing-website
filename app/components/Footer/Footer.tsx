@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Container, Section } from "@/app/components/ui";
+import { ContainerFluid, Section } from "@/app/components/ui";
 import Image from "next/image";
 
 const footerSections = [
@@ -40,7 +40,7 @@ export function Footer() {
   return (
     <footer>
       <Section variant="blue" className="w-full text-white pt-24 pb-12">
-        <Container>
+        <ContainerFluid>
           <div className="flex justify-between items-center mb-10">
             <div className="relative w-[200px] h-[60px] md:w-[250px] md:h-[100px]">
               <Image
@@ -98,7 +98,7 @@ export function Footer() {
               ))}
             </div>
           </div>
-        </Container>
+        </ContainerFluid>
       </Section>
     </footer>
   );

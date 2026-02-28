@@ -8,6 +8,7 @@ import { Testimonials } from "./(pages)/_home/components/Testimonials";
 import { Faq } from "./(pages)/_home/components/Faq";
 import { WesolveStrategy } from "./(pages)/_home/components/WesolveStrategy";
 import { LatestNews } from "./(pages)/_home/components/LatestNews";
+import { BuildOnce } from "./(pages)/_home/components/BuildOnce";
 
 
 export default function Home() {
@@ -21,7 +22,8 @@ export default function Home() {
       <HowIriscaleworks />
       <WesolveStrategy />
       <WhatyouGet />
-      {/* <LatestNews /> */}
+      <LatestNews />
+      <BuildOnce />
       <Faq />
       
     </div>

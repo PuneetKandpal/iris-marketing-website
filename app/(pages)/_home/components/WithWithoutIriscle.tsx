@@ -1,10 +1,15 @@
-import { Container, Section } from "@/app/components/ui";
+import { ContainerFluid, Section } from "@/app/components/ui";
 import Image from "next/image";
 
 const comparison = [
   {
     label: "WITHOUT IRISCALE",
-    title: "Every tool forgets your context. You're the human API.",
+     title: (
+      <>
+        Every tool forgets your context.<br />
+        You're the human API.
+      </>
+    ),
     description:
       "Brief ChatGPT. Again. Copy keywords from Semrush. Again. Explain your positioning. Again. Review for consistency. Again.",
     variant: "light",
@@ -28,26 +33,26 @@ const comparison = [
 export function WithWithoutIriscle() {
   return (
     <Section className="pt-24">
-      <Container>
+      <ContainerFluid>
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-[56px] font-flecha-s-regular font-light tracking-tight">
+          <h2 className="text-[56px] md:text-[56px] lg:text-[56px] font-flecha-s-regular font-light leading-none tracking-tight">
             The broken loop you're stuck in
           </h2>
         </div>
 
         {/* Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-15">
           {comparison.map((item, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden px-12 py-12 md:px-16 flex flex-col justify-between  ${
+              className={`relative overflow-hidden px-3 py-10 md:px-10 md:py-5 lg:px-12 lg:py-12 flex flex-col leading-none justify-between  ${
                 item.variant === "dark"
                   ? "text-white"
                   : "text-foreground bg-white"
               }`}
             >
-              {/* Background for dark card */}
+             
               {item.variant === "dark" && (
                 <div className="absolute inset-0">
                   <Image
@@ -61,7 +66,7 @@ export function WithWithoutIriscle() {
                 </div>
               )}
 
-              {/* Top Content */}
+             
               <div className="relative z-10 text-center space-y-6">
                 <p
                   className={`text-sm text-[#0B363C] font-semibold uppercase relative inline-block mb-8 ${
@@ -78,7 +83,7 @@ export function WithWithoutIriscle() {
                 </h3>
 
                 <p
-                  className={`text-sm md:text-base text-[#0B363C] max-w-md ${
+                  className={`text-sm md:text-base text-center text-[#0B363C] inline-block max-w-md ${
                     item.variant === "dark"
                       ? "text-white/80"
                       : "text-muted"
@@ -88,7 +93,6 @@ export function WithWithoutIriscle() {
                 </p>
               </div>
 
-              {/* Bottom Design */}
               <div className="relative z-10 mt-10 flex flex-col items-center">
                 {item.variant === "light" ? (
                   <div className="relative w-full h-[260px]">
@@ -101,7 +105,6 @@ export function WithWithoutIriscle() {
                   </div>
                 ) : (
                   <>
-                    {/* Main card */}
                     <div className="relative w-[340px] h-[260px] ">
                       <Image src="/images/img-2.png" fill alt="img" />
                     </div>
@@ -112,7 +115,7 @@ export function WithWithoutIriscle() {
             </div>
           ))}
         </div>
-      </Container>
+      </ContainerFluid>
     </Section>
   );
 }

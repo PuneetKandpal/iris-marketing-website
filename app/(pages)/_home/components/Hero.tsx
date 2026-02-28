@@ -31,7 +31,7 @@ export function Hero() {
           />
         </p>
 
-        <h1 className="mx-auto max-w-4xl font-flecha-s-regular text-5xl font-normal tracking-tight sm:text-7xl">
+        <h1 className="mx-auto max-w-4xl font-flecha-s-regular text-[56px] leading-none lg:text-5xl font-normal tracking-tight ">
           Scale your marketing <br className="hidden sm:block" /> without
           scaling your team.
         </h1>
@@ -42,7 +42,7 @@ export function Hero() {
           in minutes instead of days.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="mt-10 flex flex-row items-center justify-center gap-4">
           <Button variant="accent" size="lg" className="w-full sm:w-auto">
             Try for Free
           </Button>
@@ -59,7 +59,7 @@ export function Hero() {
           {/* ACCORDION BOX */}
           <div className="bg-white rounded-md border border-[#DDDACB]">
             <div className="flex justify-between items-center p-6">
-              <h4 className="font-medium font-flecha-s-regular">Company Marketing Strategy</h4>
+              <h4 className="font-medium text-base font-flecha-s-regular">Company Marketing Strategy</h4>
               <span className="text-sm text-muted">81 total items</span>
             </div>
 
@@ -76,7 +76,7 @@ export function Hero() {
                     className="w-full flex items-center justify-between p-4"
                   >
                     <div className="flex items-center gap-3">
-                      <span>{item.title}</span>
+                      <span className="text-base">{item.title}</span>
                       {item.items && (
                         <span className="text-xs bg-gray-100 px-2 py-1 rounded-full">
                           {item.items}
@@ -101,7 +101,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="sm:flex items-center justify-center hidden">
             <div className="relative w-full h-[250px] ">
               <Image
                 src="/images/img-5.png"
@@ -110,9 +110,9 @@ export function Hero() {
                 className="object-contain rounded-md border border-[#DDDACB] bg-white"
               />
             </div>
-            </div>
+          </div>
 
-          <div className="flex items-center justify-center">
+          <div className="sm:flex items-center justify-center hidden">
             <div className="relative w-full h-[250px]">
               <Image
                 src="/images/img-5.png"
