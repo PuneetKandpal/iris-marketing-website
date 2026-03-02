@@ -19,16 +19,6 @@
   --font-flecha-s-light: var(--font-FlechaS-Light);
   --font-flecha-s-regular: var(--font-FlechaS-Regular);
 
-  --color-background: var(--bg);
-  --color-foreground: var(--fg);
-  --color-surface: var(--surface);
-  --color-surface-dark: var(--surface-dark);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-fg);
-  --color-cream: var(--cream);
-
   --color-iris-orange: var(--iris-orange);
   --color-iris-orange-hover: var(--iris-orange-hover);
   --color-iris-orange-light: var(--iris-orange-light);
@@ -43,23 +33,6 @@
 
 /* ─── Design tokens (from Figma) ─── */
 :root {
-  /* Backgrounds */
-  --bg: #FFFFFF;
-  --fg: #1A1A1A;
-  --surface: #F5F0EB;
-  --surface-dark: #0A2928;
-  --cream: #FAF7F2;
-
-  /* Text */
-  --muted: #6B7280;
-
-  /* Borders */
-  --border: #E5E7EB;
-
-  /* Accent / CTA */
-  --accent: #E8622C;
-  --accent-fg: #FFFFFF;
-
   /* Pricing prototype / brand tokens (avoid hardcoded hex usage in components) */
   --iris-orange: #EC632F;
   --iris-orange-hover: #D9561F;
@@ -76,13 +49,13 @@
 /* ─── Base styles ─── */
 @layer base {
   body {
-    background-color: var(--bg);
-    color: var(--fg);
+    background-color: white;
+    color: var(--iris-dark);
   }
 
   *,
   *::before,
   *::after {
-    border-color: var(--border);
+    border-color: var(--iris-border);
   }
 }
