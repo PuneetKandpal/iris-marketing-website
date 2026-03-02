@@ -8,8 +8,8 @@ const variantStyles: Record<SectionVariant, string> = {
   surface: "bg-surface text-foreground",
   dark: "bg-surface-dark text-background",
   cream: "bg-cream text-foreground",
-  lightCream: "bg-[#F0EFE9] text-foreground",
-  blue: "bg-[#112225] text-foreground",
+  lightCream: "bg-iris-cream text-foreground",
+  blue: "bg-iris-dark text-foreground",
 };
 
 interface SectionProps extends ComponentPropsWithoutRef<"section"> {

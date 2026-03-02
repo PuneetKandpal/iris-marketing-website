@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export function Hero() {
-  const [open, setOpen] = useState(null);
+  const [open, setOpen] = useState<number | null>(null);
 
   const accordionItems = [
     { title: "Industries", items: "7 items" },

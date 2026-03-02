@@ -17,11 +17,11 @@ const variantStyles: Record<Variant, string> = {
   accent:
     "bg-accent text-accent-foreground hover:opacity-90",
   outline_black:
-    "border border-[#0B363C] bg-transparent text-foreground hover:bg-surface",
+    "border border-iris-teal bg-transparent text-iris-teal hover:bg-iris-teal hover:text-white",
   white:
-    "bg-white text-[#112225] hover:bg-surface",
+    "bg-white text-iris-dark hover:bg-surface",
   blackcustom:
-  "bg-[#0B363C] text-white hover:bg-surface hover:text-[#112225]",
+  "bg-iris-teal text-white hover:bg-iris-cream hover:text-iris-dark",
     
 };
 
