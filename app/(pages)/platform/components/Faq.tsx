@@ -50,24 +50,24 @@ export function Faq() {
       <Container>
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-[40px] md:text-[40px] lg:text-[40px] font-serif text-[#112225] leading-tight">
+          <h2 className="text-[40px] md:text-[40px] lg:text-[40px] font-serif text-iris-dark leading-tight">
             Frequently asked questions
           </h2>
         </div>
 
         {/* FAQ List */}
-        <div className="border-t border-gray-200">
+        <div className="border-t border-iris-border">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-gray-200">
+            <div key={index} className="border-b border-iris-border">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full py-8 flex justify-between items-center text-left group transition-all"
               >
-                <span className="text-2xl md:text-2xl lg:text-2xl font-serif text-[#112225] pr-8 ">
+                <span className="text-2xl md:text-2xl lg:text-2xl font-serif text-iris-dark pr-8 ">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 text-[#112225] transition-transform duration-300 ${
+                  className={`w-5 h-5 text-iris-dark transition-transform duration-300 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />
@@ -78,7 +78,7 @@ export function Faq() {
                   openIndex === index ? "max-h-[500px] pb-10" : "max-h-0"
                 }`}
               >
-                <p className="text-base md:text-base lg:text-base text-[#0B363C] leading-relaxed">
+                <p className="text-base md:text-base lg:text-base text-iris-teal leading-relaxed">
                   {faq.answer}
                 </p>
               </div>

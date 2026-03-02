@@ -11,9 +11,9 @@ const logos = [
 
 export function LogoTicker() {
   return (
-    <Section variant="surface" className="border-y border-border py-10">
+    <Section variant="lightCream" className="border-y border-iris-cream py-10">
       <Container>
-        <p className="text-center text-sm font-medium text-muted mb-8">
+        <p className="text-center text-sm font-medium text-iris-teal mb-8">
           TRUSTED BY INNOVATIVE TEAMS WORLDWIDE
         </p>
         <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-70">

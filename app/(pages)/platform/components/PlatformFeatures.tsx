@@ -1,7 +1,7 @@
 "use client";
 
 import { ContainerFluid, Section } from "@/app/components/ui";
-import React, { useState } from 'react';
+import React from 'react';
 
 
   const features = [
@@ -38,13 +38,13 @@ import React, { useState } from 'react';
       <ContainerFluid>
         <div className=" text-center">
             <div className="text-center mb-16 max-w-4xl mx-auto text-center">
-              <p className="text-sm leading-[25px] font-medium text-[#0b363c] uppercase mb-4 border-b-2 border-[#EC632F] inline-block">
+              <p className="text-sm leading-[25px] font-medium text-iris-teal uppercase mb-4 border-b-2 border-iris-orange inline-block">
                   Platform Features
               </p>
-              <h2 className="text-[40px] md:text-5xl lg:text-[56px] font-serif leading-[1.1] text-[#112225]">
+              <h2 className="text-[40px] md:text-5xl lg:text-[56px] font-serif leading-[1.1] text-iris-dark">
                   Everything you need to scale marketing systematically
               </h2>
-              <p className="text-[#0B363C] text-base text-center px-0 lg:px-55 leading-relaxed">
+              <p className="text-iris-teal text-base text-center px-0 lg:px-55 leading-relaxed">
                   Monitor opportunities, track performance, and maintain consistency as your business evolves.
               </p>
             </div>
@@ -52,10 +52,10 @@ import React, { useState } from 'react';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
             {features.map((feature, index) => (
               <div key={index} className="flex flex-col items-center">
-                <h3 className="text-3xl lg:text-3xl text-[#112225] mb-4 font-serif">
+                <h3 className="text-3xl lg:text-3xl text-iris-dark mb-4 font-serif">
                   {feature.title}
                 </h3>
-                <p className="text-[#0B363C] font-sans text-base leading-relaxed max-w-lg">
+                <p className="text-iris-teal font-sans text-base leading-relaxed max-w-lg">
                   {feature.description}
                 </p>
               </div>

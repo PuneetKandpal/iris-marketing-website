@@ -60,29 +60,29 @@ export function Testimonials() {
               className="h-full testimonial-swiper"
             >
               {testimonialContent.map((item, index) => (
-                <SwiperSlide key={index} className="bg-[#F0EFE9]">
+                <SwiperSlide key={index} className="bg-iris-cream">
                   <div className="p-10 md:p-10 lg:p-10 flex flex-col justify-between h-full">
                     <div className="space-y-12">
                       
-                      <div className="text-2xl md:text-2xl lg:text-[40px] font-serif text-[#112225] leading-tight tracking-tight mb-5 md:mb-0 lg:mb-20">
+                      <div className="text-2xl md:text-2xl lg:text-[40px] font-serif text-iris-dark leading-tight tracking-tight mb-5 md:mb-0 lg:mb-20">
                         “{item.quote}”
                       </div>
                     </div>
 
                     <div className="mt-16 flex items-end justify-between">
                       <div className="space-y-1">
-                        <p className="text-base font-bold text-[#0F1E19]">{item.clientName}</p>
-                        <p className="text-base text-[#41655A] tracking-wider font-medium">
+                        <p className="text-base font-bold text-iris-dark">{item.clientName}</p>
+                        <p className="text-base text-iris-body tracking-wider font-medium">
                           {item.clientRole}
                         </p>
                       </div>
 
                       {/* Controls Area */}
                       <div className="flex gap-px shadow-sm">
-                        <button className="swiper-button-prev-custom w-12 h-12 flex items-center justify-center bg-[#d9dcd5] transition-colors z-10">
+                        <button className="swiper-button-prev-custom w-12 h-12 flex items-center justify-center bg-iris-border transition-colors z-10">
                           <ChevronLeft className="w-5 h-5 text-gray-700" />
                         </button>
-                        <button className="swiper-button-next-custom w-12 h-12 flex items-center justify-center bg-[#d9dcd5] transition-colors z-10">
+                        <button className="swiper-button-next-custom w-12 h-12 flex items-center justify-center bg-iris-border transition-colors z-10">
                           <ChevronRight className="w-5 h-5 text-gray-700" />
                         </button>
                       </div>

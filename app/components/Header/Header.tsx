@@ -13,11 +13,11 @@ export function Header() {
   const navItems = ["Platform", "Pricing", "Blog", "About"];
 
   return (
-    <header className="w-full border-b border-border bg-background sticky top-0 z-50">
+    <header className="w-full border-b border-iris-cream bg-white sticky top-0 z-50">
       <ContainerFluid className="h-20 flex items-center justify-between relative">
         {/* Logo */}
         <Link href="/" className="z-50 flex items-center">
-          <span className="font-serif text-3xl font-medium tracking-tight text-[#0B1D1D]">
+          <span className="font-serif text-3xl font-medium tracking-tight text-iris-dark">
             Iriscale
           </span>
         </Link>
@@ -28,7 +28,7 @@ export function Header() {
             <Link
               key={item}
               href={`/${item.toLowerCase()}`}
-              className="text-sm font-medium text-muted hover:text-foreground transition-colors"
+              className="text-sm font-medium text-iris-dark hover:text-iris-orange transition-colors"
             >
               {item}
             </Link>
@@ -45,7 +45,7 @@ export function Header() {
           {/* Mobile Hamburger/Close Icon */}
           <button 
             onClick={toggleMenu}
-            className="md:hidden z-50 p-2 text-[#0B1D1D] focus:outline-none"
+            className="md:hidden z-50 p-2 text-iris-dark focus:outline-none"
             aria-label="Toggle Menu"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -64,7 +64,7 @@ export function Header() {
                 key={item}
                 href={`/${item.toLowerCase()}`}
                 onClick={() => setIsOpen(false)}
-                className="text-4xl font-serif text-[#0B1D1D] hover:opacity-70 transition-opacity"
+                className="text-4xl font-serif text-iris-dark hover:opacity-70 transition-opacity"
               >
                 {item}
               </Link>

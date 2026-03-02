@@ -1,5 +1,4 @@
 import { ContainerFluid, Section } from "@/app/components/ui";
-import Image from "next/image";
 
 
 const articles = [
@@ -22,17 +21,17 @@ const articles = [
 
 export function HowIriscaleworks() {
   return (
-    <Section className="pt-24 bg-white">
+    <Section className="pt-24 pb-24 bg-white">
       <ContainerFluid>
         {/* Main Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto text-center">
-            <p className="text-sm  font-medium text-[#0B363C] uppercase mb-4 border-b-2 border-[#EC632F] inline-block">
+            <p className="text-sm  font-medium text-iris-teal uppercase mb-4 border-b-2 border-iris-orange inline-block">
                 How Iriscale works
             </p>
-            <h2 className="text-[40px] md:text-5xl lg:text-[56px] font-serif leading-[1.1] text-[#112225]">
+            <h2 className="text-[40px] md:text-5xl lg:text-[56px] font-serif leading-[1.1] text-iris-dark">
                 Marketing that thinks like a strategist, executes like a machine
             </h2>
-            <p className="text-[#0B363C] text-base text-center px-0 lg:px-55 leading-relaxed">
+            <p className="text-iris-teal text-base text-center px-0 lg:px-55 leading-relaxed">
                 Iriscale replaces disconnected marketing tools with one intelligent system. Build your foundation once, then scale content creation without quality loss.
             </p>
         </div>
@@ -48,10 +47,10 @@ export function HowIriscaleworks() {
                 />
               </div>
 
-              <p className="text-3xl md:text-2xl lg:text-[40px] font-normal font-serif text-[#112225] mb-3 ">
+              <p className="text-3xl md:text-2xl lg:text-[40px] font-normal font-serif text-iris-dark mb-3 ">
                 {item.category}
               </p>
-              <h3 className=" font-normal text-base text-[#0B363C] ">
+              <h3 className=" font-normal text-base text-iris-teal ">
                 {item.title}
               </h3>
               

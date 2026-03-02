@@ -70,7 +70,7 @@ export function WhatyouGet() {
       <ContainerFluid>
         {/* Header - Centered and Responsive Text */}
         <div className="text-center mb-16 md:mb-20 px-4">
-            <div className="inline-block border-b-2 border-orange-500 pb-1 mb-8 "> 
+            <div className="inline-block border-b-2 border-iris-orange pb-1 mb-8 "> 
                 <span className="text-sm font-semibold uppercase relative inline-block text-white">
                 What You Get
                 </span>
@@ -85,7 +85,7 @@ export function WhatyouGet() {
           {features.map((item, index) => (
             <div
               key={index}
-              className="group p-5 md:p-10 lg:p-8 bg-[#0B363C] transition-all duration-300 ease-in-out"
+              className="group p-5 md:p-10 lg:p-8 bg-iris-teal transition-all duration-300 ease-in-out"
             >
                 <div className="mb-5 relative w-6 h-6">
                     <Image

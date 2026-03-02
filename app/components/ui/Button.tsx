@@ -7,19 +7,19 @@ type Size = "sm" | "md" | "lg";
 
 const variantStyles: Record<Variant, string> = {
   primary:
-    "bg-foreground text-background hover:opacity-90",
+    "bg-iris-dark text-white hover:opacity-90",
   secondary:
-    "bg-surface text-foreground hover:bg-surface/80",
+    "bg-iris-cream text-iris-dark hover:bg-iris-border",
   outline:
-    "border border-border bg-transparent text-foreground hover:bg-surface",
+    "border border-iris-border bg-transparent text-iris-dark hover:bg-iris-cream",
   ghost:
-    "bg-transparent text-foreground hover:bg-surface",
+    "bg-transparent text-iris-dark hover:bg-iris-cream",
   accent:
-    "bg-accent text-accent-foreground hover:opacity-90",
+    "bg-iris-orange text-white hover:bg-iris-orange-hover",
   outline_black:
     "border border-iris-teal bg-transparent text-iris-teal hover:bg-iris-teal hover:text-white",
   white:
-    "bg-white text-iris-dark hover:bg-surface",
+    "bg-white text-iris-dark hover:bg-iris-cream",
   blackcustom:
   "bg-iris-teal text-white hover:bg-iris-cream hover:text-iris-dark",
     

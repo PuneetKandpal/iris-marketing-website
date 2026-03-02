@@ -62,13 +62,13 @@ export function BlogGrid() {
           <h1 className="text-4xl md:text-5xl font-serif font-light tracking-tight mb-6">
             Iriscale Blog
           </h1>
-          <p className="text-lg text-muted max-w-2xl">
+          <p className="text-lg text-iris-body max-w-2xl">
             Thoughts, insights, and news from the team building the future of work.
           </p>
         </div>
 
         {/* Featured Post */}
-        <div className="mb-16 rounded-2xl overflow-hidden border border-border bg-background hover:shadow-lg transition-shadow">
+        <div className="mb-16 rounded-2xl overflow-hidden border border-iris-border bg-white hover:shadow-lg transition-shadow">
           <Link href={`/blog/${posts[0].id}`} className="flex flex-col md:flex-row group">
             <div className="md:w-1/2 relative aspect-video md:aspect-auto">
               <Image
@@ -80,16 +80,16 @@ export function BlogGrid() {
             </div>
             <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
               <div className="flex items-center gap-4 mb-4 text-sm">
-                <span className="text-accent font-medium">{posts[0].category}</span>
-                <span className="text-muted">{posts[0].date}</span>
+                <span className="text-iris-orange font-medium">{posts[0].category}</span>
+                <span className="text-iris-body">{posts[0].date}</span>
               </div>
-              <h2 className="text-3xl font-semibold mb-4 group-hover:text-accent transition-colors">
+              <h2 className="text-3xl font-semibold mb-4 group-hover:text-iris-orange transition-colors">
                 {posts[0].title}
               </h2>
-              <p className="text-muted text-lg mb-6">
+              <p className="text-iris-body text-lg mb-6">
                 {posts[0].excerpt}
               </p>
-              <div className="flex items-center text-accent font-medium">
+              <div className="flex items-center text-iris-orange font-medium">
                 Read Article <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </div>
             </div>
@@ -103,8 +103,8 @@ export function BlogGrid() {
               key={cat}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 cat === "All"
-                  ? "bg-foreground text-background"
-                  : "bg-surface hover:bg-surface/80 text-muted"
+                  ? "bg-iris-dark text-white"
+                  : "bg-iris-cream hover:bg-iris-border text-iris-body"
               }`}
             >
               {cat}
@@ -116,7 +116,7 @@ export function BlogGrid() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.slice(1).map((post) => (
             <Link key={post.id} href={`/blog/${post.id}`} className="group flex flex-col">
-              <div className="relative aspect-video rounded-xl overflow-hidden mb-4 border border-border">
+              <div className="relative aspect-video rounded-xl overflow-hidden mb-4 border border-iris-border">
                 <Image
                   src={post.imageUrl}
                   alt={post.title}
@@ -125,13 +125,13 @@ export function BlogGrid() {
                 />
               </div>
               <div className="flex items-center gap-3 mb-3 text-sm">
-                <span className="text-accent font-medium">{post.category}</span>
-                <span className="text-muted">{post.date}</span>
+                <span className="text-iris-orange font-medium">{post.category}</span>
+                <span className="text-iris-body">{post.date}</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-iris-orange transition-colors line-clamp-2">
                 {post.title}
               </h3>
-              <p className="text-muted line-clamp-2">
+              <p className="text-iris-body line-clamp-2">
                 {post.excerpt}
               </p>
             </Link>

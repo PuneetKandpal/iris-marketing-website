@@ -20,7 +20,7 @@ export function Hero() {
   return (
     <Section variant="lightCream" className="pt-24 pb-24">
       <Container className="text-center">
-        <p className="text-sm text-[#0B363C] font-semibold uppercase relative inline-block mb-8">
+        <p className="text-sm text-iris-teal font-semibold uppercase relative inline-block mb-8">
           Marketing Intelligence Platform
           <Image
             src="/images/lines.png"
@@ -36,7 +36,7 @@ export function Hero() {
           scaling your team.
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-iris-body sm:text-xl">
           One platform replaces your entire marketing stack. Expert strategy
           built in. Your brand voice locked in. Content that converts, created
           in minutes instead of days.
@@ -57,17 +57,17 @@ export function Hero() {
 
         <div className="mt-20 grid lg:grid-cols-3 gap-8 text-left items-start">
           {/* ACCORDION BOX */}
-          <div className="bg-white rounded-md border border-[#DDDACB]">
+          <div className="bg-white rounded-md border border-iris-border">
             <div className="flex justify-between items-center p-6">
               <h4 className="font-medium text-base font-flecha-s-regular">Company Marketing Strategy</h4>
-              <span className="text-sm text-muted">81 total items</span>
+              <span className="text-sm text-iris-body">81 total items</span>
             </div>
 
-            <div className="space-y-3 bg-[#fcfbf7] p-6 rounded-md">
+            <div className="space-y-3 bg-iris-light p-6 rounded-md">
               {accordionItems.map((item, index) => (
                 <div
                   key={index}
-                  className="border border-border rounded-lg  bg-[#ffffff]"
+                  className="border border-iris-border rounded-lg bg-white"
                 >
                   <button
                     onClick={() =>
@@ -92,7 +92,7 @@ export function Hero() {
                   </button>
 
                   {open === index && (
-                    <div className="px-4 pb-4 text-sm text-muted">
+                    <div className="px-4 pb-4 text-sm text-iris-body">
                       Coming Soon
                     </div>
                   )}
@@ -107,7 +107,7 @@ export function Hero() {
                 src="/images/img-5.png"
                 fill
                 alt="img"
-                className="object-contain rounded-md border border-[#DDDACB] bg-white"
+                className="object-contain rounded-md border border-iris-border bg-white"
               />
             </div>
           </div>
@@ -118,7 +118,7 @@ export function Hero() {
                 src="/images/img-5.png"
                 fill
                 alt="img"
-                className="object-contain rounded-md border border-[#DDDACB] bg-white"
+                className="object-contain rounded-md border border-iris-border bg-white"
               />
             </div>
           </div>

@@ -53,7 +53,7 @@ export function PricingCards() {
           <h1 className="text-4xl md:text-5xl font-serif font-light tracking-tight mb-6">
             Simple, transparent pricing
           </h1>
-          <p className="text-lg text-muted">
+          <p className="text-lg text-iris-body">
             No hidden fees. No surprise charges. Choose the plan that best fits your needs.
           </p>
         </div>
@@ -64,25 +64,25 @@ export function PricingCards() {
               key={tier.name}
               className={`rounded-2xl p-8 flex flex-col ${
                 tier.highlighted
-                  ? "border-accent border-2 shadow-lg relative"
-                  : "border border-border bg-background"
+                  ? "border-iris-orange border-2 shadow-lg relative"
+                  : "border border-iris-border bg-white"
               }`}
             >
               {tier.highlighted && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-iris-orange text-white px-3 py-1 rounded-full text-sm font-medium">
                   Most Popular
                 </div>
               )}
               <h3 className="text-2xl font-semibold mb-2">{tier.name}</h3>
-              <p className="text-muted mb-6">{tier.description}</p>
+              <p className="text-iris-body mb-6">{tier.description}</p>
               <div className="mb-6">
                 <span className="text-4xl font-bold">{tier.price}</span>
-                {tier.price !== "Custom" && <span className="text-muted">/month</span>}
+                {tier.price !== "Custom" && <span className="text-iris-body">/month</span>}
               </div>
               <ul className="space-y-4 mb-8 flex-1">
                 {tier.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-accent shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-iris-orange shrink-0" />
                     <span>{feature}</span>
                   </li>
                 ))}

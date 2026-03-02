@@ -26,7 +26,7 @@ export function FeatureHighlight() {
               <h2 className="text-3xl font-serif font-light tracking-tight sm:text-4xl mb-4">
                 Everything you need to scale
               </h2>
-              <p className="text-lg text-muted">
+              <p className="text-lg text-iris-body">
                 Stop juggling multiple tools. Iriscale brings your entire operation
                 into one unified, intelligent platform.
               </p>
@@ -35,12 +35,12 @@ export function FeatureHighlight() {
             <div className="space-y-6">
               {features.map((feature, index) => (
                 <div key={index} className="flex gap-4">
-                  <div className="mt-1 bg-accent/10 p-2 rounded-full h-fit">
-                    <CheckCircle2 className="h-5 w-5 text-accent" />
+                  <div className="mt-1 bg-iris-orange-light p-2 rounded-full h-fit">
+                    <CheckCircle2 className="h-5 w-5 text-iris-orange" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">{feature.title}</h3>
-                    <p className="text-muted">{feature.description}</p>
+                    <p className="text-iris-body">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -48,8 +48,8 @@ export function FeatureHighlight() {
           </div>
 
           <div className="flex-1 w-full">
-            <div className="relative aspect-square md:aspect-4/3 rounded-2xl overflow-hidden border border-border bg-surface shadow-2xl">
-              <div className="absolute inset-0 flex items-center justify-center text-muted">
+            <div className="relative aspect-square md:aspect-4/3 rounded-2xl overflow-hidden border border-iris-border bg-iris-cream shadow-2xl">
+              <div className="absolute inset-0 flex items-center justify-center text-iris-body">
                 <span className="text-sm">Platform UI Image Space</span>
               </div>
             </div>

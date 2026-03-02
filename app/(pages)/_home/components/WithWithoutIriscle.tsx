@@ -49,7 +49,7 @@ export function WithWithoutIriscle() {
               className={`relative overflow-hidden px-3 py-10 md:px-10 md:py-5 lg:px-12 lg:py-12 flex flex-col leading-none justify-between  ${
                 item.variant === "dark"
                   ? "text-white"
-                  : "text-foreground bg-white"
+                  : "text-iris-dark bg-white"
               }`}
             >
              
@@ -69,10 +69,10 @@ export function WithWithoutIriscle() {
              
               <div className="relative z-10 text-center space-y-6">
                 <p
-                  className={`text-sm text-[#0B363C] font-semibold uppercase relative inline-block mb-8 ${
+                  className={`text-sm text-iris-teal font-semibold uppercase relative inline-block mb-8 ${
                     item.variant === "dark"
                       ? "text-white/70"
-                      : "text-[#0B363C]"
+                      : "text-iris-teal"
                   }`}
                 >
                   {item.label}
@@ -83,10 +83,10 @@ export function WithWithoutIriscle() {
                 </h3>
 
                 <p
-                  className={`text-sm md:text-base text-center text-[#0B363C] inline-block max-w-md ${
+                  className={`text-sm md:text-base text-center text-iris-teal inline-block max-w-md ${
                     item.variant === "dark"
                       ? "text-white/80"
-                      : "text-muted"
+                      : "text-iris-body"
                   }`}
                 >
                   {item.description}

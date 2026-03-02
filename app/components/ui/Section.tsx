@@ -4,12 +4,12 @@ import type { ComponentPropsWithoutRef } from "react";
 type SectionVariant = "default" | "surface" | "dark" | "cream" | "lightCream" | "blue";
 
 const variantStyles: Record<SectionVariant, string> = {
-  default: "bg-background text-foreground",
-  surface: "bg-surface text-foreground",
-  dark: "bg-surface-dark text-background",
-  cream: "bg-cream text-foreground",
-  lightCream: "bg-iris-cream text-foreground",
-  blue: "bg-iris-dark text-foreground",
+  default: "bg-white text-iris-dark",
+  surface: "bg-iris-cream text-iris-dark",
+  dark: "bg-iris-teal text-white",
+  cream: "bg-iris-light text-iris-dark",
+  lightCream: "bg-iris-cream text-iris-dark",
+  blue: "bg-iris-dark text-white",
 };
 
 interface SectionProps extends ComponentPropsWithoutRef<"section"> {

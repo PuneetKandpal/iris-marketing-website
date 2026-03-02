@@ -37,10 +37,10 @@ export function HowIriscaleworks() {
       <ContainerFluid>
         {/* Main Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <p className="text-sm leading-[25px] font-semibold text-[#0b363c] uppercase mb-4 border-b-2 border-[#EC632F] inline-block">
+          <p className="text-sm leading-[25px] font-semibold text-iris-teal uppercase mb-4 border-b-2 border-iris-orange inline-block">
             How Iriscale works
           </p>
-          <h2 className="text-[40px] md:text-5xl lg:text-[56px] font-serif leading-tight text-[#112225]">
+          <h2 className="text-[40px] md:text-5xl lg:text-[56px] font-serif leading-tight text-iris-dark">
             Marketing that thinks like a strategist, executes like a machine
           </h2>
         </div>
@@ -61,16 +61,16 @@ export function HowIriscaleworks() {
                   className="opacity-90 transition-transform"
                 />
                 
-                <div className="relative z-10 bg-[#F0EFE9] backdrop-blur-sm p-5 md:15 lg:p-20 shadow-xl w-full max-w-sm">
+                <div className="relative z-10 bg-iris-cream backdrop-blur-sm p-5 md:15 lg:p-20 shadow-xl w-full max-w-sm">
                   <div className="flex justify-between bg-white p-3 items-center mb-6 rounded-md">
                      <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                        <span className="text-xs font-medium text-gray-800 ">{item.statusLabel}</span>
+                        <span className="text-xs font-medium text-iris-dark ">{item.statusLabel}</span>
                      </div>
-                     <span className="text-lg text-[#112225] font-flecha-s-regular">{item.progress}</span>
+                     <span className="text-lg text-iris-dark font-flecha-s-regular">{item.progress}</span>
                   </div>
                   <div className="space-y-2 bg-white p-3 rounded-md">
-                    <p className="text-xs text-[#112225] leading-relaxed">
+                    <p className="text-xs text-iris-dark leading-relaxed">
                         This is some placeholder text about the platform and what it does.
                     </p>
                   </div>
@@ -78,15 +78,15 @@ export function HowIriscaleworks() {
               </div>
 
               <div className="w-full md:w-1/2 space-y-6">
-                <div className="inline-block border-b-2 border-[#EC632F] pb-1">
-                    <p className="text-sm font-bold text-[#0B363C] uppercase">
+                <div className="inline-block border-b-2 border-iris-orange pb-1">
+                    <p className="text-sm font-bold text-iris-teal uppercase">
                         {item.step}
                     </p>
                 </div>
-                <h3 className="text-3xl md:text-3xl lg:text-4xl font-serif text-[#112225] font-normal leading-tight max-w-md">
+                <h3 className="text-3xl md:text-3xl lg:text-4xl font-serif text-iris-dark font-normal leading-tight max-w-md">
                   {item.title}
                 </h3>
-                <p className="text-[#0B363C] text-base lg:text-lg leading-relaxed max-w-lg">
+                <p className="text-iris-teal text-base lg:text-lg leading-relaxed max-w-lg">
                   {item.description}
                 </p>
               </div>
