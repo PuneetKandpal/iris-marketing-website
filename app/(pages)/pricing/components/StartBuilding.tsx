@@ -5,7 +5,7 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-export function BuildOnce() {
+export function StartBuilding() {
   return (
     <Section variant="blue" className="w-full pb-10 md:pb-0 md:pt-0 lg:pb-24 lg:pt-0 text-white">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
@@ -16,15 +16,18 @@ export function BuildOnce() {
                     </div>
                 </div>
 
-                <h1 className="text-[44px] md:text-4xl lg:text-[64px] font-serif leading-[1.1] mb-10 max-w-lg">
-                    Build once.<br className="hidden sm:block" />
-                    Execute forever,<br className="hidden sm:block" />
-                    with Iriscale.
+                <h1 className="text-[44px] md:text-4xl lg:text-[64px] font-serif leading-[1.1] mb-5 max-w-lg">
+                    Start building your <br className="hidden sm:block" />
+                    marketing strategy<br className="hidden sm:block" />
                 </h1>
+                
+                <p className="text-xl font-normal mb-5">See how Iriscale creates your competitive analysis, persona research, and content strategy in the first hour.</p>
 
                 <Button variant="white" className="w-fit px-8 py-3 text-lg font-normal rounded-lg">
-                    Get Started
+                    Try Iriscale free for 14 days
                 </Button>
+
+                <p className="text-base font-normal mt-5">No credit card • 1-hour setup • Full access • Cancel anytime</p>
             </div>
 
             <div className="relative w-full h-[450px] lg:h-auto order-1 lg:order-2">

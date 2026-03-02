@@ -6,29 +6,34 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "This is a temporary question about Iriscale.",
+    question: "Can I switch plans anytime?",
     answer:
-      "Rhetorich helps legal professionals communicate with more clarity, confidence, and impact. Through a mix of expert human coaching, AI-powered feedback, and peer learning, teams improve everything from client interactions to internal collaboration.",
+      "Yes. Upgrade or downgrade anytime. Changes take effect immediately.",
   },
   {
-    question: "How does this work?",
+    question: "What happens after the trial?",
     answer:
-      "Rhetorich helps legal professionals communicate with more clarity, confidence, and impact. Through a mix of expert human coaching, AI-powered feedback, and peer learning, teams improve everything from client interactions to internal collaboration.",
+      "Yes. Upgrade or downgrade anytime. Changes take effect immediately.",
   },
   {
-    question: "Who is Iriscale for?",
+    question: "Do you offer annual discounts?",
     answer:
-      "Rhetorich helps legal professionals communicate with more clarity, confidence, and impact. Through a mix of expert human coaching, AI-powered feedback, and peer learning, teams improve everything from client interactions to internal collaboration.",
+      "Yes. Upgrade or downgrade anytime. Changes take effect immediately.",
   },
   {
-    question: "This is a temporary question.",
+    question: "What if I need more than Scale offers?",
     answer:
-      "Rhetorich helps legal professionals communicate with more clarity, confidence, and impact. Through a mix of expert human coaching, AI-powered feedback, and peer learning, teams improve everything from client interactions to internal collaboration.",
+      "Yes. Upgrade or downgrade anytime. Changes take effect immediately.",
   },
   {
-    question: "What exactly does Iriscale do?",
+    question: "Can I add team members?",
     answer:
-      "Rhetorich helps legal professionals communicate with more clarity, confidence, and impact. Through a mix of expert human coaching, AI-powered feedback, and peer learning, teams improve everything from client interactions to internal collaboration.",
+      "Yes. Upgrade or downgrade anytime. Changes take effect immediately.",
+  },
+   {
+    question: "What payment methods do you accept?",
+    answer:
+      "Yes. Upgrade or downgrade anytime. Changes take effect immediately.",
   },
 ];
 

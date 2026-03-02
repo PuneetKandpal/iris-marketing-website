@@ -21,7 +21,7 @@ const articles = [
 
 export function LatestNews() {
   return (
-    <Section className="pt-24 pb-24 bg-white font-sans">
+    <Section className="pb-24 bg-white font-sans">
       <ContainerFluid>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 pt-4">
           <div className="">

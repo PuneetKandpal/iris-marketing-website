@@ -2,7 +2,7 @@ import { Button as HeadlessButton } from "@headlessui/react";
 import { clsx } from "clsx";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "outline" | "ghost" | "accent" | "outline_black" | "white";
+type Variant = "primary" | "secondary" | "outline" | "ghost" | "accent" | "outline_black" | "white" | "blackcustom";
 type Size = "sm" | "md" | "lg";
 
 const variantStyles: Record<Variant, string> = {
@@ -20,6 +20,9 @@ const variantStyles: Record<Variant, string> = {
     "border border-[#0B363C] bg-transparent text-foreground hover:bg-surface",
   white:
     "bg-white text-[#112225] hover:bg-surface",
+  blackcustom:
+  "bg-[#0B363C] text-white hover:bg-surface hover:text-[#112225]",
+    
 };
 
 const sizeStyles: Record<Size, string> = {

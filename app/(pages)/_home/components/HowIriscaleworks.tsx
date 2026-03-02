@@ -86,7 +86,7 @@ export function HowIriscaleworks() {
                 <h3 className="text-3xl md:text-3xl lg:text-4xl font-serif text-[#112225] font-normal leading-tight max-w-md">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-text-base lg:text-lg leading-relaxed max-w-lg">
+                <p className="text-[#0B363C] text-base lg:text-lg leading-relaxed max-w-lg">
                   {item.description}
                 </p>
               </div>

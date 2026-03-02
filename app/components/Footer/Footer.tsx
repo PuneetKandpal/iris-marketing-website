@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ContainerFluid, Section } from "@/app/components/ui";
 import Image from "next/image";
-import LogoWhite from "@/public/images/website/logo-white.png";
 
 const footerSections = [
   {
@@ -40,19 +39,19 @@ const footerSections = [
 export function Footer() {
   return (
     <footer>
-      <Section variant="blue" className="w-full text-white pt-24 pb-12">
+      <Section variant="blue" className="w-full text-white pt-10 pb-12 lg:pt-24 lg:pb-12 md:pt-10 md:pb-12">
         <ContainerFluid>
           <div className="flex justify-between items-center mb-10">
             <div className="relative w-[200px] h-[60px] md:w-[250px] md:h-[100px]">
               <Image
-                src={LogoWhite}
+                src="/images/logowhite.png"
                 alt="Iriscale Logo"
                 fill
                 className="object-contain object-left"
                 priority
               />
             </div>
-            <div className="hidden md:block">
+            <div className="">
               <div className="relative w-12 h-12 ">
                   <Image 
                       src="/images/vector-2.png" 
@@ -67,17 +66,14 @@ export function Footer() {
           {/* Divider Line */}
           <div className="w-full h-px bg-white/10 mb-16" />
 
-          {/* Bottom Section: Copyright and Nav Links */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
-            {/* Copyright Info */}
-            <div className="md:col-span-5">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 ">
+            <div className="md:col-span-5 order-2 md:order-1">
               <p className="text-sm text-white">
                 © 2025 Iriscale. All rights reserved.
               </p>
             </div>
 
-            {/* Navigation Columns */}
-            <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-8">
+            <div className="order-1 md:order-2 md:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-8">
               {footerSections.map((section) => (
                 <div key={section.title} className="flex flex-col gap-4">
                   <h4 className="text-sm font-medium text-white">
@@ -88,7 +84,7 @@ export function Footer() {
                       <li key={link.label}>
                         <Link 
                           href={link.href}
-                          className="text-sm text-white"
+                          className="text-sm font-normal text-white"
                         >
                           {link.label}
                         </Link>

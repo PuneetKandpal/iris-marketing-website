@@ -70,9 +70,9 @@ export function WhatyouGet() {
       <ContainerFluid>
         {/* Header - Centered and Responsive Text */}
         <div className="text-center mb-16 md:mb-20 px-4">
-            <div className="inline-block border-b-2 border-orange-500 pb-1 mb-8 "> 
-                <span className="text-sm font-semibold uppercase relative inline-block text-white">
-                What You Get
+            <div className="inline-block border-b-2 border-[#EC632F] pb-1 mb-8 "> 
+                <span className="text-sm font-medium uppercase relative inline-block text-white">
+                    What you Get
                 </span>
             </div>
             <h2 className="text-[40px] md:text-5xl lg:text-5xl font-serif max-w-xl mx-auto leading-[1.15] tracking-tight">
