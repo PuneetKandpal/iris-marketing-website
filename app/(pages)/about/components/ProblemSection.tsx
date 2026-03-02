@@ -3,8 +3,9 @@ import { ContainerFluid, Section } from "@/app/components/ui";
 export function ProblemSection() {
   return (
     <Section className="bg-white">
-      <ContainerFluid className="pt-20 pb-14 md:pt-24 md:pb-16">
-        <div className="max-w-3xl">
+      <ContainerFluid className="px-6 sm:px-10 pt-20 pb-14 md:pt-24 md:pb-16">
+        <div className="border-x border-iris-cream px-8">
+          <div className="max-w-3xl">
           <div className="inline-flex flex-col items-start gap-2">
             <p className="text-sm font-semibold uppercase tracking-wide text-iris-teal">
               FOUNDATION
@@ -31,6 +32,7 @@ export function ProblemSection() {
               Iriscale solves strategy first. Expert-level thinking, accessible to any
               company.
             </p>
+          </div>
           </div>
         </div>
       </ContainerFluid>
