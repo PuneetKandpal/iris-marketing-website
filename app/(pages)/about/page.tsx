@@ -1,10 +1,21 @@
-import { AboutHero, TeamSection } from "./components/AboutSections";
+import { AboutCtaSection } from "./components/AboutCtaSection";
+import { AboutFaqSection } from "./components/AboutFaqSection";
+import { AboutHero } from "./components/AboutHero";
+import { DifferencesSection } from "./components/DifferencesSection";
+import { ProblemSection } from "./components/ProblemSection";
+import { ResultsSection } from "./components/ResultsSection";
+import { UpdatesSection } from "./components/UpdatesSection";
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col w-full">
       <AboutHero />
-      <TeamSection />
+      <ProblemSection />
+      <ResultsSection />
+      <DifferencesSection />
+      <UpdatesSection />
+      <AboutCtaSection />
+      <AboutFaqSection />
     </div>
   );
 }
