@@ -15,6 +15,7 @@ export default function AboutPage() {
       <SlantSeparator />
       <ResultsSection />
       <DifferencesSection />
+      <SlantSeparator/>
       <UpdatesSection />
       <AboutCtaSection />
       <AboutFaqSection />

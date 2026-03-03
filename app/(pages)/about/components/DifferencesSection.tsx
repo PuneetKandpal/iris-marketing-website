@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { ContainerFluid, Section } from "@/app/components/ui";
 
 const differences = [
@@ -24,39 +22,67 @@ const differences = [
 
 export function DifferencesSection() {
   return (
-    <Section className="bg-white">
-      <ContainerFluid className="pt-20 pb-20 md:pt-24 md:pb-24">
-        <h2 className="font-serif text-[40px] md:text-[56px] leading-none tracking-tight text-iris-dark">
-          How we&apos;re different
-        </h2>
+    <Section className="bg-white border-b border-iris-cream">
+      <ContainerFluid className="px-6 sm:px-10">
+        <div className="border-x border-iris-cream">
+          <div className="px-8 py-20 md:py-24">
+            <h2 className="font-serif text-[40px] leading-none tracking-tight text-iris-dark md:text-[56px]">
+              How we&apos;re different
+            </h2>
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-stretch">
-          <div className="flex flex-col">
-            {differences.map((item) => (
-              <div
-                key={item.title}
-                className={
-                  "border-l-4 pl-6 py-4 " +
-                  (item.highlighted ? "border-iris-orange" : "border-iris-cream")
-                }
-              >
-                <p className="font-serif text-2xl md:text-[30px] leading-tight tracking-tight text-iris-dark">
-                  {item.title}
-                </p>
-                <p className="mt-2 text-base text-iris-teal leading-relaxed max-w-md">
-                  {item.description}
-                </p>
+            <div className="mt-10 grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)]">
+              <div className="max-w-2xl space-y-6">
+                {differences.map((item, index) => (
+                  <div key={item.title} className="flex gap-4">
+                    <span
+                      className={
+                        "mt-1 h-[calc(100%-0.25rem)] w-1 rounded-full " +
+                        (index === 0 ? "bg-iris-orange" : "bg-iris-cream")
+                      }
+                      aria-hidden
+                    />
+                    <div>
+                      <p className="font-serif text-[28px] leading-tight tracking-tight text-iris-dark md:text-[32px]">
+                        {item.title}
+                      </p>
+                      <p className="mt-2 text-sm leading-relaxed text-iris-teal md:text-base">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          <div className="relative overflow-hidden rounded-md min-h-[320px] bg-iris-dark">
-            <Image
-              src="/images/img-18.png"
-              alt=""
-              fill
-              className="object-cover opacity-80"
-            />
+              <div className="w-full">
+                <div className="relative aspect-4/3 w-full overflow-hidden bg-[url('/images/img-17.png')] bg-cover bg-center">
+                  <div className="absolute inset-0 flex items-center justify-center px-6 py-10 md:px-12">
+                    <div className="w-full max-w-[360px] border border-iris-cream bg-iris-light px-6 py-8 md:px-10 md:py-12 shadow-sm">
+                      <p className="text-sm font-semibold text-iris-teal">
+                        [Mockup showing Company Intelligence dashboard with:]
+                      </p>
+                      <ul className="mt-4 space-y-2 text-sm leading-relaxed text-iris-teal">
+                        <li className="flex items-start gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-iris-teal" />
+                          <span>Persona cards displaying pain points</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-iris-teal" />
+                          <span>Keyword list with opportunity scores</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-iris-teal" />
+                          <span>Competitor analysis summary</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-iris-teal" />
+                          <span>Connected data showing how intelligence flows to content</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </ContainerFluid>

@@ -22,15 +22,15 @@ const results = [
 export function ResultsSection() {
   return (
     <Section className="bg-white">
-      <ContainerFluid className="px-6 sm:px-10 pt-20 md:pt-24">
-        <div className="border-x border-iris-cream px-8">
-          <div className="text-center">
+      <ContainerFluid className="px-6 sm:px-10">
+        <div className="border-x border-iris-cream">
+          <div className="px-8 pt-20 md:pt-24 text-center">
             <h2 className="font-serif text-[40px] md:text-[56px] leading-none tracking-tight text-iris-dark">
               Built on real results
             </h2>
           </div>
 
-          <div className="mt-12 border-b border-iris-cream pb-10">
+          <div className="border-b border-iris-cream px-8 pb-10 mt-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
               {results.map((item) => (
                 <div key={item.title} className="flex flex-col items-center gap-2">

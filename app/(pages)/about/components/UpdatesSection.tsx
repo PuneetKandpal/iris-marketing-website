@@ -23,50 +23,60 @@ const updates = [
 
 export function UpdatesSection() {
   return (
-    <Section className="bg-white">
-      <ContainerFluid className="pt-20 pb-20 md:pt-24 md:pb-24">
-        <div className="flex items-end justify-between gap-6">
-          <div>
-            <h2 className="font-serif text-[40px] md:text-[56px] leading-none tracking-tight text-iris-dark">
-              Keep up to date on the latest from Iriscale
-            </h2>
-            <p className="mt-4 text-base md:text-lg text-iris-teal max-w-2xl">
-              Strategy, systems, and what we&apos;re learning building Iriscale.
-            </p>
-          </div>
-          <div className="hidden md:block">
-            <Button variant="outline_black" size="md">
-              View all
-            </Button>
-          </div>
-        </div>
-
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {updates.map((item) => (
-            <div key={item.title} className="group cursor-pointer">
-              <div className="relative aspect-16/10 overflow-hidden bg-iris-cream mb-6">
-                <Image src={item.image} alt="" fill className="object-cover" />
+    <Section className="bg-white border-b border-iris-cream">
+      <ContainerFluid className="px-6 sm:px-10">
+        <div className="border-x border-iris-cream">
+          <div className="px-8 py-20 md:py-24">
+            <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+              <div className="max-w-3xl">
+                <div className="inline-flex flex-col gap-2">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-iris-teal">
+                    Latest News
+                  </p>
+                  <div className="h-0.5 w-16 bg-iris-orange" />
+                </div>
+                <h2 className="mt-6 font-serif text-[40px] leading-none tracking-tight text-iris-dark md:text-[56px]">
+                  Keep up to date on the latest from Iriscale
+                </h2>
+                <p className="mt-4 text-base text-iris-teal md:text-lg">
+                  Strategy, systems, and what we&apos;re learning building Iriscale.
+                </p>
               </div>
-              <h3 className="text-2xl font-normal font-serif text-iris-dark mb-4">
-                {item.title}
-              </h3>
-              <p className="text-sm text-iris-body leading-relaxed mb-4">
-                {item.description}
-              </p>
-              <a
-                href="#"
-                className="text-sm font-bold text-iris-teal underline underline-offset-4 decoration-iris-teal"
-              >
-                Read more
-              </a>
+              <div className="hidden md:block">
+                <Button variant="outline_black" size="md">
+                  View all
+                </Button>
+              </div>
             </div>
-          ))}
-        </div>
 
-        <div className="mt-10 md:hidden">
-          <Button variant="outline_black" size="md" className="w-full">
-            View all
-          </Button>
+            <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+              {updates.map((item) => (
+                <div key={item.title} className="group cursor-pointer">
+                  <div className="relative mb-6 aspect-16/10 overflow-hidden bg-iris-cream">
+                    <Image src={item.image} alt="" fill className="object-cover" />
+                  </div>
+                  <h3 className="mb-4 font-serif text-2xl font-normal text-iris-dark">
+                    {item.title}
+                  </h3>
+                  <p className="mb-4 text-sm leading-relaxed text-iris-body">
+                    {item.description}
+                  </p>
+                  <a
+                    href="#"
+                    className="text-sm font-semibold text-iris-teal underline decoration-iris-teal underline-offset-4"
+                  >
+                    Read more
+                  </a>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 md:hidden">
+              <Button variant="outline_black" size="md" className="w-full">
+                View all
+              </Button>
+            </div>
+          </div>
         </div>
       </ContainerFluid>
     </Section>
