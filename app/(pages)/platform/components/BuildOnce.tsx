@@ -28,7 +28,7 @@ export function BuildOnce() {
             </div>
 
             <div className="relative w-full h-[450px] lg:h-auto order-1 lg:order-2">
-                <img src="/images/img-12.png" alt="Hero portrait" className="absolute inset-0 top-0 w-full h-full object-cover object-right md:object-cover lg:object-top" />
+                <Image src="/images/img-12.png" alt="Hero portrait" className="absolute inset-0 top-0 w-full h-full object-cover object-right md:object-cover lg:object-top" width={600} height={450} />
                 <div className="absolute inset-0 bg-black/10 mix-blend-multiply pointer-events-none"></div>
             </div>
         </div>
