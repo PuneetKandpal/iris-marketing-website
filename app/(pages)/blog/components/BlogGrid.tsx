@@ -1,141 +1,199 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { Container, Section } from "@/app/components/ui";
+import { Search } from "lucide-react";
+import { Button, Container, Section } from "@/app/components/ui";
 
-const posts = [
+const sidebarItems = [
+  { label: "Marketing Intelligence 101", href: "/blog" },
+  { label: "SEO Strategy & Operations", href: "/blog" },
+  { label: "Content Operations & Scale", href: "/blog" },
+  { label: "Social Media Planning", href: "/blog" },
+  { label: "Multi-Brand Governance", href: "/blog" },
+  { label: "Marketing Analytics & ROI", href: "/blog" },
+  { label: "Team Collaboration for Marketing", href: "/blog" },
+  { label: "Workflow Automation", href: "/blog" },
+  { label: "AI Search & Brand Visibility", href: "/blog" },
+  { label: "Iriscale Intelligence Framework", href: "/blog" },
+];
+
+const cards = [
   {
-    id: 1,
-    title: "How to scale your engineering team in 2024",
-    excerpt: "Learn the strategies top companies are using to grow their technical teams without losing velocity.",
-    category: "Engineering",
-    date: "Mar 15, 2024",
-    imageUrl: "/images/blog/engineering.svg",
+    id: "single-source",
+    metaLeft: "MARKETING INTELLIGENCE 101",
+    metaRight: "8 MIN READ",
+    title: "Single Source of Truth Marketing",
+    excerpt:
+      "A single source of truth in marketing centralizes data from all channels and systems into one reliable, consistent view so teams make decisions from the same validated information.",
   },
   {
-    id: 2,
-    title: "The future of automated workflows",
-    excerpt: "Why the next generation of automation isn&apos;t just about saving time, it&apos;s about making better decisions.",
-    category: "Product",
-    date: "Mar 10, 2024",
-    imageUrl: "/images/blog/product.svg",
+    id: "mi-vs-bi",
+    metaLeft: "MARKETING INTELLIGENCE 101",
+    metaRight: "8 MIN READ",
+    title: "Marketing Intelligence vs Business Intelligence",
+    excerpt:
+      "Marketing intelligence focuses specifically on unifying and analyzing marketing data to optimize growth, while business intelligence spans broader operational and strategic decisions.",
   },
   {
-    id: 3,
-    title: "Announcing Iriscale 2.0",
-    excerpt: "We&apos;ve rebuilt our core engine from the ground up. Here&apos;s everything that&apos;s new in this release.",
-    category: "News",
-    date: "Mar 5, 2024",
-    imageUrl: "/images/blog/news.svg",
+    id: "mi-stack",
+    metaLeft: "MARKETING INTELLIGENCE 101",
+    metaRight: "8 MIN READ",
+    title: "Building Marketing Intelligence Stack",
+    excerpt:
+      "How to design the systems and data layers that run marketing activity into predictable insight.",
   },
   {
-    id: 4,
-    title: "Building a culture of documentation",
-    excerpt: "Documentation is often an afterthought. Here&apos;s how to make it a core part of your team&apos;s culture.",
-    category: "Culture",
-    date: "Feb 28, 2024",
-    imageUrl: "/images/blog/culture.svg",
+    id: "mi-guide",
+    metaLeft: "MARKETING INTELLIGENCE 101",
+    metaRight: "8 MIN READ",
+    title: "What is Marketing Intelligence Guide",
+    excerpt:
+      "A practical overview of what marketing intelligence is and how to implement it.",
   },
   {
-    id: 5,
-    title: "Securing your data at scale",
-    excerpt: "A deep dive into the security architecture that powers enterprise applications.",
-    category: "Security",
-    date: "Feb 20, 2024",
-    imageUrl: "/images/blog/security.svg",
+    id: "use-cases",
+    metaLeft: "MARKETING INTELLIGENCE 101",
+    metaRight: "8 MIN READ",
+    title: "Marketing Intelligence Use Cases",
+    excerpt:
+      "Real examples of how unified marketing data improves performance and decision making.",
   },
   {
-    id: 6,
-    title: "Why we chose Next.js for our new frontend",
-    excerpt: "The technical decisions behind our recent migration and what we learned along the way.",
-    category: "Engineering",
-    date: "Feb 12, 2024",
-    imageUrl: "/images/blog/frontend.svg",
+    id: "stack-diagram",
+    metaLeft: "MARKETING INTELLIGENCE 101",
+    metaRight: "8 MIN READ",
+    title: "Marketing Intelligence Stack Diagram",
+    excerpt:
+      "A visual breakdown of the core components in a modern marketing intelligence stack.",
+  },
+  {
+    id: "compound",
+    metaLeft: "MARKETING INTELLIGENCE 101",
+    metaRight: "8 MIN READ",
+    title: "Marketing should compound, not reset",
+    excerpt:
+      "Marketing systems should build long-term value instead of starting from zero each cycle.",
+  },
+  {
+    id: "ai-without-memory",
+    metaLeft: "MARKETING INTELLIGENCE 101",
+    metaRight: "8 MIN READ",
+    title: "AI without memory is just automation",
+    excerpt:
+      "A truly becomes intelligent when it retains context and learns over time.",
+  },
+  {
+    id: "dashboards",
+    metaLeft: "MARKETING INTELLIGENCE 101",
+    metaRight: "8 MIN READ",
+    title: "Why dashboards don’t equal intelligence",
+    excerpt:
+      "Reporting metrics is not the same as generating insight or direction.",
+  },
+  {
+    id: "ai-content-brain",
+    metaLeft: "MARKETING INTELLIGENCE 101",
+    metaRight: "8 MIN READ",
+    title: "Why AI content needs a brain",
+    excerpt:
+      "AI content performs best when guided by structure, strategy and context.",
   },
 ];
 
 export function BlogGrid() {
   return (
-    <Section className="py-24">
+    <Section className="py-10 md:py-16 lg:py-20">
       <Container>
-        <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-serif font-light tracking-tight mb-6">
-            Iriscale Blog
-          </h1>
-          <p className="text-lg text-iris-body max-w-2xl">
-            Thoughts, insights, and news from the team building the future of work.
-          </p>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10 lg:gap-14">
+          <aside className="lg:sticky lg:top-24 self-start">
+            <div className="font-serif text-2xl text-iris-dark">Skill Center</div>
 
-        {/* Featured Post */}
-        <div className="mb-16 rounded-2xl overflow-hidden border border-iris-border bg-white hover:shadow-lg transition-shadow">
-          <Link href={`/blog/${posts[0].id}`} className="flex flex-col md:flex-row group">
-            <div className="md:w-1/2 relative aspect-video md:aspect-auto">
-              <Image
-                src={posts[0].imageUrl}
-                alt={posts[0].title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-              <div className="flex items-center gap-4 mb-4 text-sm">
-                <span className="text-iris-orange font-medium">{posts[0].category}</span>
-                <span className="text-iris-body">{posts[0].date}</span>
-              </div>
-              <h2 className="text-3xl font-semibold mb-4 group-hover:text-iris-orange transition-colors">
-                {posts[0].title}
-              </h2>
-              <p className="text-iris-body text-lg mb-6">
-                {posts[0].excerpt}
-              </p>
-              <div className="flex items-center text-iris-orange font-medium">
-                Read Article <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        {/* Categories */}
-        <div className="flex flex-wrap gap-2 mb-10">
-          {["All", "Engineering", "Product", "News", "Culture", "Security"].map((cat) => (
-            <button
-              key={cat}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                cat === "All"
-                  ? "bg-iris-dark text-white"
-                  : "bg-iris-cream hover:bg-iris-border text-iris-body"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.slice(1).map((post) => (
-            <Link key={post.id} href={`/blog/${post.id}`} className="group flex flex-col">
-              <div className="relative aspect-video rounded-xl overflow-hidden mb-4 border border-iris-border">
-                <Image
-                  src={post.imageUrl}
-                  alt={post.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+            <div className="mt-5">
+              <div className="flex items-center gap-2 rounded-md border border-iris-border bg-white px-3 py-2">
+                <Search className="h-4 w-4 text-iris-muted" aria-hidden="true" />
+                <input
+                  type="search"
+                  placeholder="Search"
+                  className="w-full bg-transparent text-sm text-iris-dark placeholder:text-iris-muted focus:outline-none"
                 />
               </div>
-              <div className="flex items-center gap-3 mb-3 text-sm">
-                <span className="text-iris-orange font-medium">{post.category}</span>
-                <span className="text-iris-body">{post.date}</span>
+            </div>
+
+            <nav className="mt-6">
+              <div className="flex flex-col gap-1">
+                {sidebarItems.map((item, idx) => {
+                  const isActive = idx === 0;
+
+                  return (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className={
+                        isActive
+                          ? "rounded-md bg-iris-light px-3 py-2 text-sm text-iris-dark"
+                          : "rounded-md px-3 py-2 text-sm text-iris-body hover:bg-iris-light"
+                      }
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
               </div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-iris-orange transition-colors line-clamp-2">
-                {post.title}
-              </h3>
-              <p className="text-iris-body line-clamp-2">
-                {post.excerpt}
-              </p>
-            </Link>
-          ))}
+            </nav>
+          </aside>
+
+          <main>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+              <div className="lg:col-span-2 rounded-md bg-iris-teal text-white px-6 py-7 md:px-8 md:py-8">
+                <div className="inline-flex items-center rounded-sm bg-white/15 px-2 py-1 text-[10px] tracking-wide font-camera-plain-regular">
+                  MARKETING INTELLIGENCE 101
+                </div>
+
+                <h1 className="mt-4 font-serif text-[32px] leading-tight tracking-tight md:text-[40px]">
+                  What is Marketing Intelligence
+                </h1>
+
+                <p className="mt-3 max-w-2xl text-sm md:text-[15px] leading-relaxed text-white/80 font-camera-plain-regular">
+                  Marketing intelligence is the structured process of collecting, analyzing, and
+                  organizing marketing data across channels to drive better decisions. It turns
+                  fragmented metrics into a single source of truth so teams can understand performance,
+                  identify opportunities, and make durable choices based on evidence rather than
+                  instinct.
+                </p>
+
+                <div className="mt-5">
+                  <Button variant="accent" size="sm" className="rounded-sm">
+                    Read More
+                  </Button>
+                </div>
+              </div>
+
+              {cards.map((card) => (
+                <Link
+                  key={card.id}
+                  href={`/blog/${card.id}`}
+                  className="rounded-md border border-iris-border bg-iris-light px-6 py-7 hover:bg-iris-cream transition-colors"
+                >
+                  <div className="flex items-center justify-between text-[10px] tracking-wide text-iris-muted">
+                    <span className="font-camera-plain-regular">{card.metaLeft}</span>
+                    <span className="font-camera-plain-regular">{card.metaRight}</span>
+                  </div>
+
+                  <h2 className="mt-4 font-serif text-[24px] leading-snug tracking-tight text-iris-dark">
+                    {card.title}
+                  </h2>
+
+                  <p className="mt-3 text-sm leading-relaxed text-iris-body font-camera-plain-regular">
+                    {card.excerpt}
+                  </p>
+
+                  <div className="mt-5">
+                    <Button variant="accent" size="sm" className="rounded-sm">
+                      Read More
+                    </Button>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </main>
         </div>
       </Container>
     </Section>
