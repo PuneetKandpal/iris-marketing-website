@@ -9,18 +9,46 @@ const differences = [
     title: "Strategy before execution",
     description: "Know what to create and why before generating content.",
     highlighted: true,
+    mockupText: "Mockup showing Company Intelligence dashboard with:",
+    points: [
+      "Persona cards displaying pain points",
+      "Keyword list with opportunity scores",
+      "Competitor analysis summary",
+      "Connected data showing how intelligence flows to content",
+    ],
   },
   {
     title: "Quality at scale",
     description: "AI speed with expert-level thinking built in.",
+    mockupText: "Mockup showing scale controls with:",
+    points: [
+      "Editorial guardrails",
+      "Approval workflows",
+      "Quality checks before publish",
+      "Consistency across channels",
+    ],
   },
   {
     title: "Intelligence that compounds",
     description: "Marketing gets easier over time, not harder.",
+    mockupText: "Mockup showing compounding intelligence with:",
+    points: [
+      "Reusable insights",
+      "Connected datasets",
+      "Learning over time",
+      "Faster planning cycles",
+    ],
   },
   {
     title: "Accessible expertise",
     description: "Strategic capabilities without the strategic salary.",
+    mockupText: "Mockup showing built-in expertise with:",
+    points: [
+      "Best-practice templates",
+      "Guided setup",
+      "Strategy prompts",
+      "Clear next steps",
+    ],
   },
 ];
 
@@ -41,85 +69,47 @@ export function DifferencesSection() {
               How we&apos;re different
             </h2>
 
-            <div className="mt-10 grid items-start gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)]">
+            <div className="mt-10 flex flex-col lg:flex-row gap-16 items-start -ml-8">
               
               {/* LEFT SIDE */}
-              <div className="relative w-full pl-8">
-                <span
-                  aria-hidden
-                  className="absolute left-2 top-0 w-px bg-iris-cream"
-                  style={{ height: "calc(100% + 60px)" }}
-                />
-                <span
-                  aria-hidden
-                  className="absolute left-2 top-0 w-1 rounded-full bg-iris-orange"
-                  style={{ height: "96px" }}
-                />
-
-                <div className="space-y-6">
-                  {differences.map((item, index) => {
-                    const isActive = activeIndex === index;
-
-                    return (
-                      <div
-                        key={item.title}
-                        onClick={() => setActiveIndex(index)}
-                        className="cursor-pointer"
-                      >
-                        <p
-                          className={`font-serif text-[28px] leading-tight tracking-tight md:text-[32px] ${
-                            isActive
-                              ? "text-iris-dark"
-                              : "text-iris-dark/50"
-                          }`}
-                        >
-                          {item.title}
-                        </p>
-
-                        <p
-                          className={`mt-2 text-sm leading-relaxed md:text-base ${
-                            isActive
-                              ? "text-iris-teal"
-                              : "text-iris-teal/50"
-                          }`}
-                        >
-                          {item.description}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </div>
+              <div className="w-full lg:w-1/2 border-l-2 border-iris-border">
+                {differences.map((item, index) => (
+                  <button
+                    key={item.title}
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
+                    className={`w-full text-left relative pl-5 py-5 lg:pl-8 -ml-[2px] border-l-4 transition-all duration-300 outline-none block ${
+                      activeIndex === index
+                        ? "border-iris-orange opacity-100"
+                        : "border-iris-cream hover:opacity-70 hover:border-iris-orange"
+                    }`}
+                  >
+                    <h3 className="text-3xl font-serif text-iris-dark mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-iris-teal text-base leading-relaxed lg:max-w-md">
+                      {item.description}
+                    </p>
+                  </button>
+                ))}
               </div>
 
               {/* RIGHT SIDE */}
-              <div className="w-full justify-self-end">
-                <div className="relative aspect-4/3 w-full max-w-[640px] overflow-hidden bg-[url('/images/img-17.png')] bg-cover bg-center">
-                  <div className="absolute inset-0 flex items-center justify-center px-6 py-10 md:px-12">
-                    <div className="w-full max-w-[360px] border border-iris-cream bg-iris-light px-6 py-8 md:px-10 md:py-12 shadow-sm">
-                      <p className="text-sm font-semibold text-iris-teal">
-                        [Mockup showing Company Intelligence dashboard with:]
-                      </p>
-                      <ul className="mt-4 space-y-2 text-sm leading-relaxed text-iris-teal">
-                        <li className="flex items-start gap-3">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-iris-teal" />
-                          <span>Persona cards displaying pain points</span>
+              <div className="w-full lg:w-1/2 sticky top-24">
+                <div className="relative aspect-4/3 w-full flex items-center justify-center px-6 py-30 lg:py-0 md:px-12 lg:px-26 bg-[url('/images/img-17.png')] bg-cover bg-center">
+                  <div className="relative bg-iris-cream w-full px-6 py-15 md:px-10 lg:px-35 lg:py-35 flex flex-col justify-center transition-all duration-500">
+                    <p className="text-[14.27px] lg:text-[12.73px] font-normal text-iris-dark mb-1">
+                      [{differences[activeIndex].mockupText}]
+                    </p>
+
+                    <ul className="space-y-2 sm:space-y-2 text-[14.27px] lg:text-[12.73px] font-normal text-iris-dark">
+                      {differences[activeIndex].points.map((point, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="text-iris-dark mt-2 h-1.5 w-1.5 rounded-full bg-iris-dark shrink-0" />
+                          <span className="leading-relaxed">{point}</span>
                         </li>
-                        <li className="flex items-start gap-3">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-iris-teal" />
-                          <span>Keyword list with opportunity scores</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-iris-teal" />
-                          <span>Competitor analysis summary</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-iris-teal" />
-                          <span>
-                            Connected data showing how intelligence flows to content
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
