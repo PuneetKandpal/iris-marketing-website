@@ -26,9 +26,9 @@ const variantStyles: Record<Variant, string> = {
 };
 
 const sizeStyles: Record<Size, string> = {
-  sm: "h-8 px-3 text-sm gap-1.5",
-  md: "h-10 px-5 text-sm gap-2",
-  lg: "h-12 px-6 text-base gap-2",
+  sm: "h-10 px-[16px] py-[8px] text-[14px]",
+  md: "h-10 px-[16px] py-[8px] text-[18px]",
+  lg: "h-12 px-6 text-base",
 };
 
 interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
@@ -47,7 +47,7 @@ export function Button({
   return (
     <HeadlessButton
       className={clsx(
-        "inline-flex items-center justify-center font-medium rounded-lg transition-all duration-150 whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed",
+        "inline-flex items-center font-camera-plain-regular justify-center font-medium rounded-sm transition-all duration-150 whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed",
         variantStyles[variant],
         sizeStyles[size],
         className,

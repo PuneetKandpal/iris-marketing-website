@@ -12,26 +12,26 @@ export function StartBuilding() {
             <div className="flex flex-col justify-center px-10 md:px-10 lg:px-24 py-15 md:py-0 lg:py-26 order-2 md:order-1 lg:order-1">
                 <div className="mb-10">
                     <div className="relative w-12 h-12 ">
-                        <Image src="/images/vector-2.png" alt="Iriscale Icon" fill className="object-contain"/>
+                        <Image src="/images/common/tower-white.png"  alt="Iriscale Icon" fill className="object-contain"/>
                     </div>
                 </div>
 
-                <h1 className="text-[44px] md:text-4xl lg:text-[64px] font-serif leading-[1.1] mb-5 max-w-lg">
+                <h1 className="text-[44px] md:text-4xl lg:text-[64px] font-flecha-s-regular leading-[1.1] mb-5 max-w-lg">
                     Start building your <br className="hidden sm:block" />
                     marketing strategy<br className="hidden sm:block" />
                 </h1>
                 
-                <p className="text-xl font-normal mb-5">See how Iriscale creates your competitive analysis, persona research, and content strategy in the first hour.</p>
+                <p className="text-xl font-camera-plain-regular font-normal mb-7">See how Iriscale creates your competitive analysis, persona research, and content strategy in the first hour.</p>
 
-                <Button variant="white" className="w-fit px-8 py-3 text-lg font-normal rounded-lg">
+                <Button variant="white" size="md" className="w-fit mb-7 px-8 py-3 text-lg font-normal rounded-lg font-camera-plain-regular">
                     Try Iriscale free for 14 days
                 </Button>
 
-                <p className="text-base font-normal mt-5">No credit card • 1-hour setup • Full access • Cancel anytime</p>
+                <p className="text-base font-normal">No credit card • 1-hour setup • Full access • Cancel anytime</p>
             </div>
 
             <div className="relative w-full h-[450px] lg:h-auto order-1 lg:order-2">
-                <img src="/images/img-12.png" alt="Hero portrait" className="absolute inset-0 top-0 w-full h-full object-cover object-right md:object-cover lg:object-top" />
+                <Image src="/images/img-12.png" alt="Hero portrait" className="absolute inset-0 top-0 w-full h-full object-cover object-right md:object-cover lg:object-top" />
                 <div className="absolute inset-0 bg-black/10 mix-blend-multiply pointer-events-none"></div>
             </div>
         </div>

@@ -73,10 +73,10 @@ export function Header() {
             <hr className="w-full border-slate-200" />
             
             <div className="flex flex-col w-full gap-4 mt-4">
-              <Button variant="secondary" className="w-full text-lg py-6">
+              <Button variant="secondary" size="sm" className="w-full text-lg py-6">
                 Login
               </Button>
-              <Button variant="accent" className="w-full text-lg py-6">
+              <Button variant="accent" size="sm" className="w-full text-lg py-6">
                 Schedule Demo
               </Button>
             </div>

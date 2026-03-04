@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import { ContainerFluid, Section } from "@/app/components/ui";
+import { SlantSeparator } from "./SlantSeparator";
 
 const differences = [
   {
@@ -20,41 +24,76 @@ const differences = [
   },
 ];
 
+const initialHighlightedIndex = Math.max(
+  differences.findIndex((item) => item.highlighted),
+  0,
+);
+
 export function DifferencesSection() {
+  const [activeIndex, setActiveIndex] = useState(initialHighlightedIndex);
+
   return (
     <Section className="bg-white border-b border-iris-cream">
       <ContainerFluid className="px-6 sm:px-10">
         <div className="border-x border-iris-cream">
-          <div className="px-8 py-20 md:py-24">
+          <div className="px-8 pt-20 pb-8 md:pt-24 md:pb-10">
             <h2 className="font-serif text-[40px] leading-none tracking-tight text-iris-dark md:text-[56px]">
               How we&apos;re different
             </h2>
 
-            <div className="mt-10 grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)]">
-              <div className="max-w-2xl space-y-6">
-                {differences.map((item, index) => (
-                  <div key={item.title} className="flex gap-4">
-                    <span
-                      className={
-                        "mt-1 h-[calc(100%-0.25rem)] w-1 rounded-full " +
-                        (index === 0 ? "bg-iris-orange" : "bg-iris-cream")
-                      }
-                      aria-hidden
-                    />
-                    <div>
-                      <p className="font-serif text-[28px] leading-tight tracking-tight text-iris-dark md:text-[32px]">
-                        {item.title}
-                      </p>
-                      <p className="mt-2 text-sm leading-relaxed text-iris-teal md:text-base">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+            <div className="mt-10 grid items-start gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,640px)]">
+              
+              {/* LEFT SIDE */}
+              <div className="relative w-full pl-8">
+                <span
+                  aria-hidden
+                  className="absolute left-2 top-0 w-px bg-iris-cream"
+                  style={{ height: "calc(100% + 60px)" }}
+                />
+                <span
+                  aria-hidden
+                  className="absolute left-2 top-0 w-1 rounded-full bg-iris-orange"
+                  style={{ height: "96px" }}
+                />
+
+                <div className="space-y-6">
+                  {differences.map((item, index) => {
+                    const isActive = activeIndex === index;
+
+                    return (
+                      <div
+                        key={item.title}
+                        onClick={() => setActiveIndex(index)}
+                        className="cursor-pointer"
+                      >
+                        <p
+                          className={`font-serif text-[28px] leading-tight tracking-tight md:text-[32px] ${
+                            isActive
+                              ? "text-iris-dark"
+                              : "text-iris-dark/50"
+                          }`}
+                        >
+                          {item.title}
+                        </p>
+
+                        <p
+                          className={`mt-2 text-sm leading-relaxed md:text-base ${
+                            isActive
+                              ? "text-iris-teal"
+                              : "text-iris-teal/50"
+                          }`}
+                        >
+                          {item.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
 
-              <div className="w-full">
-                <div className="relative aspect-4/3 w-full overflow-hidden bg-[url('/images/img-17.png')] bg-cover bg-center">
+              {/* RIGHT SIDE */}
+              <div className="w-full justify-self-end">
+                <div className="relative aspect-4/3 w-full max-w-[640px] overflow-hidden bg-[url('/images/img-17.png')] bg-cover bg-center">
                   <div className="absolute inset-0 flex items-center justify-center px-6 py-10 md:px-12">
                     <div className="w-full max-w-[360px] border border-iris-cream bg-iris-light px-6 py-8 md:px-10 md:py-12 shadow-sm">
                       <p className="text-sm font-semibold text-iris-teal">
@@ -75,17 +114,21 @@ export function DifferencesSection() {
                         </li>
                         <li className="flex items-start gap-3">
                           <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-iris-teal" />
-                          <span>Connected data showing how intelligence flows to content</span>
+                          <span>
+                            Connected data showing how intelligence flows to content
+                          </span>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </ContainerFluid>
+      <SlantSeparator />
     </Section>
   );
 }
