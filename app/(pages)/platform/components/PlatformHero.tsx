@@ -5,7 +5,7 @@ export function PlatformHero() {
     <Section variant="lightCream" className="py-20 border-b border-iris-cream">
       <ContainerFluid >
         <div className="max-w-2xl">
-          <h1 className="text-iris-dark font-flecha-s-regular font-bold text-[44px] md:text-6xl lg:text-7xl leading-[1.1] mb-5">
+          <h1 className="text-iris-dark font-flecha-s-regular text-[44px] md:text-6xl lg:text-7xl leading-[1.1] mb-5">
             Strategic marketing platform that builds and executes
           </h1>
 

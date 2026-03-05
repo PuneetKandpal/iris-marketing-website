@@ -7,11 +7,12 @@ import { SlantSeparator } from "../about/components/SlantSeparator";
 export default function BlogPage() {
   return (
     <div className="flex flex-col w-full">
-      <BlogGrid />
+      <h1>Placeholder Page</h1>
+      {/* <BlogGrid />
       <SlantSeparator/>
       <BlogTestimonials />
       <BlogStartBuilding />
-      <BlogFaq />
+      <BlogFaq /> */}
     </div>
   );
 }

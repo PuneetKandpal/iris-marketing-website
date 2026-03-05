@@ -22,14 +22,13 @@ export function AboutHero() {
                 </Button>
               </div>
               <div className="hidden md:block">
-                <Button variant="accent" size="lg" className="w-full sm:w-auto">
+                <Button variant="accent" className="w-full sm:w-auto">
                   Try for Free
                 </Button>
               </div>
             </div>
             <Button
               variant="outline_black"
-              size="lg"
               className="w-full sm:w-auto group"
             >
               Book Demo
