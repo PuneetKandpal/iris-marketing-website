@@ -28,7 +28,7 @@ export function Header() {
             <Link
               key={item}
               href={`/${item.toLowerCase()}`}
-              className="text-sm font-medium text-iris-dark hover:text-iris-orange transition-colors"
+              className="text-sm text-iris-dark hover:text-iris-orange transition-colors font-camera-plain-regular"
             >
               {item}
             </Link>
@@ -38,8 +38,8 @@ export function Header() {
         {/* Action Buttons & Mobile Toggle */}
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="secondary">Login</Button>
-            <Button variant="accent">Schedule Demo</Button>
+            <Button variant="secondary" size="sm">Login</Button>
+            <Button variant="accent" size="sm">Schedule Demo</Button>
           </div>
 
           {/* Mobile Hamburger/Close Icon */}
@@ -71,12 +71,12 @@ export function Header() {
             ))}
             
             <hr className="w-full border-slate-200" />
-            
+
             <div className="flex flex-col w-full gap-4 mt-4">
-              <Button variant="secondary" size="sm" className="w-full text-lg py-6">
+              <Button variant="secondary" size="sm" >
                 Login
               </Button>
-              <Button variant="accent" size="sm" className="w-full text-lg py-6">
+              <Button variant="accent" size="sm">
                 Schedule Demo
               </Button>
             </div>

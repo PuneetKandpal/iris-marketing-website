@@ -43,12 +43,12 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex flex-row items-center justify-center gap-4">
-          <Button variant="accent" size="lg" className="w-full sm:w-auto">
+          <Button variant="accent" size="md" className="w-full sm:w-auto">
             Try for Free
           </Button>
           <Button
             variant="outline_black"
-            size="lg"
+            size="md"
             className="w-full sm:w-auto group"
           >
             Book Demo
