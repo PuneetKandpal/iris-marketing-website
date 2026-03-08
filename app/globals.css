@@ -29,6 +29,7 @@
   --color-iris-border: var(--iris-border);
   --color-iris-muted: var(--iris-muted);
   --color-iris-body: var(--iris-body);
+  --color-iris-light-two: var(--iris-light-two);
 }
 
 /* ─── Design tokens (from Figma) ─── */
@@ -44,6 +45,7 @@
   --iris-border: #E0DFD9;
   --iris-muted: #889994;
   --iris-body: #4B625B;
+  --iris-light-two: #FCFBF8;
 }
 
 /* ─── Base styles ─── */

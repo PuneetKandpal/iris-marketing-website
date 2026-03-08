@@ -55,24 +55,24 @@ export function Hero() {
           </Button>
         </div>
 
-        <div className="mt-20 grid lg:grid-cols-3 gap-8 text-left items-start">
+        <div className="mt-20 grid lg:grid-cols-3 gap-8 text-left items-stretch">
           {/* ACCORDION BOX */}
-          <div className="bg-white rounded-md border border-iris-border">
-            <div className="flex justify-between items-center p-6">
+          <div className="bg-white rounded-md border border-iris-border flex flex-col">
+            <div className="flex justify-between items-center p-6 border-b border-iris-border/70">
               <h4 className="font-medium text-base font-flecha-s-regular">Company Marketing Strategy</h4>
               <span className="text-sm text-iris-body">81 total items</span>
             </div>
 
-            <div className="space-y-3 bg-iris-light p-6 rounded-md">
+            <div className="space-y-3 bg-iris-light-two p-6 rounded-b-md flex-1">
               {accordionItems.map((item, index) => (
                 <div
                   key={index}
                   className="border border-iris-border rounded-lg bg-white"
                 >
                   <button
-                    onClick={() =>
-                      setOpen(open === index ? null : index)
-                    }
+                    // onClick={() =>
+                    //   setOpen(open === index ? null : index)
+                    // }
                     className="w-full flex items-center justify-between p-4"
                   >
                     <div className="flex items-center gap-3">
@@ -84,9 +84,8 @@ export function Hero() {
                       )}
                     </div>
                     <ChevronDown
-                      className={`transition ${
-                        open === index ? "rotate-180" : ""
-                      }`}
+                      className={`transition ${open === index ? "rotate-180" : ""
+                        }`}
                       size={18}
                     />
                   </button>
@@ -101,24 +100,32 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="sm:flex items-center justify-center hidden">
-            <div className="relative w-full h-[250px] ">
+          <div className="hidden sm:flex flex-col rounded-md border border-iris-border bg-white h-full">
+            <div className="flex justify-between items-center p-6 border-b border-iris-border/70">
+              <h4 className="font-medium text-base font-flecha-s-regular">Key Connections</h4>
+              <span className="text-sm text-iris-body">Flow</span>
+            </div>
+            <div className="relative w-full h-full min-h-[360px]">
               <Image
-                src="/images/img-5.png"
+                src="/images/home/home_hero_2.svg"
                 fill
                 alt="img"
-                className="object-contain rounded-md border border-iris-border bg-white"
+                className="object-cover border border-iris-border bg-white"
               />
             </div>
           </div>
 
-          <div className="sm:flex items-center justify-center hidden">
-            <div className="relative w-full h-[250px]">
+          <div className="hidden sm:flex flex-col rounded-md border border-iris-border h-full">
+            <div className="flex justify-between items-center p-6 border-b border-iris-border/70 bg-white">
+              <h4 className="font-medium text-base font-flecha-s-regular">Output</h4>
+              <span className="text-sm text-iris-body">13 total assets</span>
+            </div>
+            <div className="relative w-full h-full min-h-[360px] bg-iris-light-two">
               <Image
-                src="/images/img-5.png"
+                src="/images/home/home_hero_3.svg"
                 fill
                 alt="img"
-                className="object-contain rounded-md border border-iris-border bg-white"
+                className="object-contain rounded-md border border-iris-border"
               />
             </div>
           </div>
