@@ -3,12 +3,15 @@
 import { useState } from "react";
 import { ContainerFluid, Section } from "@/app/components/ui";
 import { SlantSeparator } from "./SlantSeparator";
+import Image from "next/image";
 
 const differences = [
   {
     title: "Strategy before execution",
     description: "Know what to create and why before generating content.",
     highlighted: true,
+    image: "/images/about/about.svg",
+    backgroundImage: "/images/img-17.png",
     mockupText: "Mockup showing Company Intelligence dashboard with:",
     points: [
       "Persona cards displaying pain points",
@@ -20,6 +23,8 @@ const differences = [
   {
     title: "Quality at scale",
     description: "AI speed with expert-level thinking built in.",
+        image: "/images/about/about.svg",
+    backgroundImage: "/images/img-17.png",
     mockupText: "Mockup showing scale controls with:",
     points: [
       "Editorial guardrails",
@@ -31,6 +36,8 @@ const differences = [
   {
     title: "Intelligence that compounds",
     description: "Marketing gets easier over time, not harder.",
+       image: "/images/about/about.svg",
+    backgroundImage: "/images/img-17.png",
     mockupText: "Mockup showing compounding intelligence with:",
     points: [
       "Reusable insights",
@@ -42,6 +49,8 @@ const differences = [
   {
     title: "Accessible expertise",
     description: "Strategic capabilities without the strategic salary.",
+       image: "/images/about/about.svg",
+    backgroundImage: "/images/img-17.png",
     mockupText: "Mockup showing built-in expertise with:",
     points: [
       "Best-practice templates",
@@ -96,20 +105,28 @@ export function DifferencesSection() {
 
               {/* RIGHT SIDE */}
               <div className="w-full lg:w-1/2 sticky top-24">
-                <div className="relative aspect-4/3 w-full flex items-center justify-center px-6 py-30 lg:py-0 md:px-12 lg:px-26 bg-[url('/images/img-17.png')] bg-cover bg-center">
-                  <div className="relative bg-iris-cream w-full px-6 py-15 md:px-10 lg:px-35 lg:py-35 flex flex-col justify-center transition-all duration-500">
-                    <p className="text-[14.27px] lg:text-[12.73px] font-normal text-iris-dark mb-1">
-                      [{differences[activeIndex].mockupText}]
-                    </p>
+                <div className="relative aspect-4/3 w-full overflow-hidden">
+                  <Image
+                    src={differences[activeIndex].backgroundImage ?? "/images/img-17.png"}
+                    alt=""
+                    fill
+                    className="object-cover"
+                  />
 
-                    <ul className="space-y-2 sm:space-y-2 text-[14.27px] lg:text-[12.73px] font-normal text-iris-dark">
-                      {differences[activeIndex].points.map((point, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <span className="text-iris-dark mt-2 h-1.5 w-1.5 rounded-full bg-iris-dark shrink-0" />
-                          <span className="leading-relaxed">{point}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/10 to-white/70" />
+
+                  <div className="relative z-10 flex h-full w-full items-end justify-center px-6 pb-0 md:px-10 lg:px-14">
+                    {differences[activeIndex].image ? (
+                      <div className="w-full max-w-[520px] drop-shadow-2xl">
+                        <Image
+                          src={differences[activeIndex].image}
+                          alt={differences[activeIndex].title}
+                          width={900}
+                          height={700}
+                          className="h-auto w-full"
+                        />
+                      </div>
+                    ) : null}
                   </div>
                 </div>
               </div>
