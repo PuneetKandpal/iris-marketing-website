@@ -1,6 +1,7 @@
 "use client"; 
 
 import { ContainerFluid, Section } from "@/app/components/ui";
+import Image from "next/image";
 import React, { useState } from 'react';
 
 
@@ -9,12 +10,16 @@ const features = [
     id: "discovery",
     title: "Discovery Stage Content",
     description: "Educational articles for customers identifying problems. Builds awareness and trust before they're ready to buy.",
+    image: "/images/platform/platform_cmc_strategy.svg",
+    backgroundImage: "/images/platform/background_strategy.png",
     mockupText: "DASHBOARD VISUAL [Mockup showing Content Architecture dashboard with:]",
     points: ["Content tree with three main branches (Discovery, Evaluation, Decision)", "Article titles under each stage", "Persona tags on each piece", "Pain points addressed","Keyword connections visible","Priority indicators"]
   },
   {
     id: "evaluation",
     title: "Evaluation Stage Content",
+    image: "/images/platform/platform_cmc_strategy.svg",
+    backgroundImage: "/images/platform/background_strategy.png",
     description: "Framework articles and comparisons for customers researching solutions. Positions your approach as superior.",
     mockupText: "Detailed persona cards with demographic data and psychographic insights.",
     points: ["Persona cards displaying pain points", "Buying behavior patterns", "Content needs mapping", "Customer journey stages"]
@@ -23,6 +28,8 @@ const features = [
     id: "decision",
     title: "Decision Stage Content",
     description: "Product-focused content and case studies for customers ready to choose. Directly drives conversions.",
+    image: "/images/platform/platform_cmc_strategy.svg",
+    backgroundImage: "/images/platform/background_strategy.png",
     mockupText: "Keyword opportunity dashboard with difficulty and business value scores.",
     points: ["Keyword list with opportunity scores", "Search volume trends", "Product-to-keyword mapping", "CPC estimates"]
   },
@@ -30,6 +37,8 @@ const features = [
     id: "planning",
     title: "Strategic Planning",
     description: "Each piece includes target persona, keywords, buying stage, internal links, and success metrics to track.",
+    image: "/images/platform/platform_cmc_strategy.svg",
+    backgroundImage: "/images/platform/background_strategy.png",
     mockupText: "Brand guidelines dashboard showing voice, tone, and messaging pillars.",
     points: ["Brand voice documentation", "Messaging pillars", "Positioning statements", "Content style guide"]
   }
@@ -77,23 +86,26 @@ export function StrategicPlanning() {
             </div>
 
             <div className="w-full lg:w-1/2 sticky top-24">
-                <div className="relative aspect-[4/3] w-full flex items-center justify-center px-6 py-30 lg:py-0 md:px-12 lg:px-26 bg-[url('/images/img-16.png')] bg-cover bg-center bg-auto ">
-                    <div className="relative bg-iris-cream w-full px-6 py-15 md:px-10 lg:px-35 lg:py-35 flex flex-col justify-center transition-all duration-500">
-                        
-                        <p className="text-[12.73px] lg:text-[12.73px] font-normal text-iris-dark mb-1 ">
-                            {features[activeTab].mockupText}
-                        </p>
+                <div className="relative aspect-[4/3] w-full overflow-hidden flex items-center justify-center">
+                    <Image
+                        src={features[activeTab].backgroundImage ?? "/images/img-16.png"}
+                        alt=""
+                        fill
+                        className="object-cover"
+                    />
 
-                        <ul className="space-y-2 sm:space-y-2 text-[12.73px] lg:text-[12.73px] font-normal text-iris-dark">
-                            {features[activeTab].points.map((point, i) => (
-                            <li key={i} className="flex items-start gap-3">
-                                <span className="text-iris-dark mt-2 h-1.5 w-1.5 rounded-full bg-iris-dark shrink-0" />
-                                <span className="leading-relaxed">
-                                {point}
-                                </span>
-                            </li>
-                            ))}
-                        </ul>
+                    <div className="relative z-10 flex h-full w-full items-center justify-center p-8 md:p-10 lg:p-12">
+                        {features[activeTab].image ? (
+                            <div className="w-full max-w-[520px]">
+                                <Image
+                                    src={features[activeTab].image}
+                                    alt={features[activeTab].title}
+                                    width={900}
+                                    height={700}
+                                    className="h-auto w-full"
+                                />
+                            </div>
+                        ) : null}
                     </div>
                 </div>
             </div>

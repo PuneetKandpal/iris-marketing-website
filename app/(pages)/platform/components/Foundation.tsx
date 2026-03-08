@@ -1,6 +1,7 @@
 "use client";
 
 import { ContainerFluid, Section } from "@/app/components/ui";
+import Image from "next/image";
 import React, { useState } from 'react';
 
 const features = [
@@ -8,28 +9,32 @@ const features = [
     id: "competitive",
     title: "Competitive Intelligence",
     description: "Analyzes competitor websites, content strategies, and positioning to reveal gaps where you can win.",
-    mockupText: "Mockup showing Company Intelligence dashboard with:",
+    image: "/images/platform/platform_cmi_foundation.svg",
+    backgroundImage: "/images/platform/background_foundation.png",
     points: ["Persona cards displaying pain points", "Keyword list with opportunity scores", "Competitor analysis summary", "Connected data showing how intelligence flows to content"]
   },
   {
     id: "personas",
     title: "Buyer Personas",
     description: "Creates detailed customer profiles with pain points, buying behaviors, and content needs mapped to journey stages.",
-    mockupText: "Detailed persona cards with demographic data and psychographic insights.",
+    image: "/images/platform/platform_cmi_foundation.svg",
+    backgroundImage: "/images/platform/background_foundation.png",
     points: ["Persona cards displaying pain points", "Buying behavior patterns", "Content needs mapping", "Customer journey stages"]
   },
   {
     id: "keywords",
     title: "Keyword Intelligence",
     description: "Researches what customers search, connects keywords to products, and prioritizes by business value.",
-    mockupText: "Keyword opportunity dashboard with difficulty and business value scores.",
+       image: "/images/platform/platform_cmi_foundation.svg",
+    backgroundImage: "/images/platform/background_foundation.png",
     points: ["Keyword list with opportunity scores", "Search volume trends", "Product-to-keyword mapping", "CPC estimates"]
   },
   {
     id: "brand",
     title: "Brand Foundation",
     description: "Documents your voice, messaging, and positioning to ensure consistent output across all content.",
-    mockupText: "Brand guidelines dashboard showing voice, tone, and messaging pillars.",
+      image: "/images/platform/platform_cmi_foundation.svg",
+    backgroundImage: "/images/platform/background_foundation.png",
     points: ["Brand voice documentation", "Messaging pillars", "Positioning statements", "Content style guide"]
   }
 ];
@@ -44,7 +49,7 @@ export function Foundation() {
             <p className="text-sm leading-[25px] font-semibold text-iris-teal uppercase mb-4 border-b-2 border-iris-orange inline-block">
                 Foundation
             </p>
-            <h2 className="max-w-2xl md:text-5xl text-[40px] md:text-4xl lg:text-[56px] font-normal font-serif text-iris-dark mt-6 mb-4 tracking-tight leading-tight">
+            <h2 className="max-w-4xl md:text-5xl text-[40px] md:text-4xl lg:text-[56px] font-normal font-serif text-iris-dark mt-6 mb-4 tracking-tight leading-tight">
                 Complete marketing intelligence
             </h2>
             <p className="max-w-2xl text-base text-iris-teal leading-relaxed">
@@ -76,23 +81,26 @@ export function Foundation() {
             </div>
 
             <div className="w-full lg:w-1/2 sticky top-24">
-                <div className="relative aspect-[4/3] w-full flex items-center justify-center px-6 py-30 lg:py-0 md:px-12 lg:px-26 bg-[url('/images/img-17.png')] bg-cover bg-center bg-auto ">
-                    <div className="relative bg-iris-cream w-full px-6 py-15 md:px-10 lg:px-35 lg:py-35 flex flex-col justify-center transition-all duration-500">
-                        
-                        <p className="text-[14.27px] lg:text-[12.73px] font-normal text-iris-dark mb-1 ">
-                            [{features[activeTab].mockupText}]
-                        </p>
+                <div className="relative aspect-[4/3] w-full overflow-hidden flex items-center justify-center">
+                    <Image
+                        src={features[activeTab].backgroundImage ?? "/images/img-17.png"}
+                        alt=""
+                        fill
+                        className="object-cover"
+                    />
 
-                        <ul className="space-y-2 sm:space-y-2 text-[14.27px] lg:text-[12.73px] font-normal text-iris-dark">
-                            {features[activeTab].points.map((point, i) => (
-                            <li key={i} className="flex items-start gap-3">
-                                <span className="text-iris-dark mt-2 h-1.5 w-1.5 rounded-full bg-iris-dark shrink-0" />
-                                <span className="leading-relaxed">
-                                {point}
-                                </span>
-                            </li>
-                            ))}
-                        </ul>
+                    <div className="relative z-10 flex h-full w-full items-center justify-center p-8 md:p-10 lg:p-12">
+                        {features[activeTab].image ? (
+                            <div className="w-full max-w-[520px]">
+                                <Image
+                                    src={features[activeTab].image}
+                                    alt={features[activeTab].title}
+                                    width={900}
+                                    height={700}
+                                    className="h-auto w-full"
+                                />
+                            </div>
+                        ) : null}
                     </div>
                 </div>
             </div>

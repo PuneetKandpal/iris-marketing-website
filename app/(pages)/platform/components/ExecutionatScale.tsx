@@ -1,14 +1,16 @@
 "use client"; // Required for useState in Next.js App Router
 
 import { ContainerFluid, Section } from "@/app/components/ui";
+import Image from "next/image";
 import React, { useState } from 'react';
-
 
 const features = [
     {
         id: "articles",
         title: "Blog Articles",
         description: "Long-form content optimized for SEO and AI search. Includes keywords, proper structure, and CTAs addressing persona pain points.",
+        image: "/images/platform/platform_ocp_execution.svg",
+        backgroundImage: "/images/platform/background_execution.png",
         mockupText: "[Mockup showing Content Editor with:]",
         points: [
             { text: "Article preview on left side" },
@@ -32,6 +34,8 @@ const features = [
     id: "content",
     title: "Social Content",
     description: "Long-form content optimized for SEO and AI search. Includes keywords, proper structure, and CTAs addressing persona pain points.",
+    image: "/images/platform/platform_ocp_execution.svg",
+    backgroundImage: "/images/platform/background_execution.png",
     mockupText: "[Mockup showing Content Editor with:]",
     points: [
         { text: "Article preview on left side" },
@@ -54,6 +58,8 @@ const features = [
     id: "campaigns",
     title: "Email Campaigns",
     description: "Long-form content optimized for SEO and AI search. Includes keywords, proper structure, and CTAs addressing persona pain points.",
+    image: "/images/platform/platform_ocp_execution.svg",
+    backgroundImage: "/images/platform/background_execution.png",
     mockupText: "[Mockup showing Content Editor with:]",
     points: [
         { text: "Article preview on left side" },
@@ -76,6 +82,8 @@ const features = [
     id: "responses",
     title: "Forum Responses",
     description: "Long-form content optimized for SEO and AI search. Includes keywords, proper structure, and CTAs addressing persona pain points.",
+    image: "/images/platform/platform_ocp_execution.svg",
+    backgroundImage: "/images/platform/background_execution.png",
     mockupText: "[Mockup showing Content Editor with:]",
     points: [
         { text: "Article preview on left side" },
@@ -138,33 +146,26 @@ export function ExecutionatScale() {
             </div>
 
             <div className="w-full lg:w-1/2 sticky top-24">
-              <div className="relative aspect-[4/3] w-full flex items-center justify-center px-6 py-30 lg:py-15 md:px-12 lg:px-26 bg-[url('/images/img-18.png')] bg-cover bg-center bg-auto">
-                <div className="relative bg-iris-cream w-full px-6 py-15 md:px-10 lg:px-35 lg:py-35 flex flex-col justify-center transition-all duration-500">
-                  <p className="text-[12.73px] lg:text-[12.73px] font-normal text-iris-dark mb-1">
-                    {features[activeTab].mockupText}
-                  </p>
+              <div className="relative aspect-[4/3] w-full overflow-hidden flex items-center justify-center">
+                <Image
+                  src={features[activeTab].backgroundImage ?? "/images/img-18.png"}
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
 
-                  <ul className="space-y-2 sm:space-y-2 text-[12.73px] lg:text-[12.73px] font-normal text-iris-dark">
-                    {features[activeTab].points.map((point, i) => (
-                      <li key={i} className="flex flex-col">
-                        <div className="flex items-start gap-3">
-                          <span className="text-iris-dark mt-2 h-1.5 w-1.5 rounded-full bg-iris-dark shrink-0" />
-                          <span className="leading-relaxed">{point.text}</span>
-                        </div>
-
-                        {point.subPoints && (
-                          <ul className="mt-2 ml-8 space-y-2">
-                            {point.subPoints.map((subItem, j) => (
-                              <li key={j} className="flex items-start gap-3">
-                                <span className="text-iris-dark mt-2 h-1.5 w-1.5 rounded-full bg-iris-dark shrink-0" />
-                                <span className="leading-relaxed">{subItem}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="relative z-10 flex h-full w-full items-center justify-center p-8 md:p-10 lg:p-12">
+                  {features[activeTab].image ? (
+                    <div className="w-full max-w-[520px]">
+                      <Image
+                        src={features[activeTab].image}
+                        alt={features[activeTab].title}
+                        width={900}
+                        height={700}
+                        className="h-auto w-full"
+                      />
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>

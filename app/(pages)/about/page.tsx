@@ -15,8 +15,8 @@ export default function AboutPage() {
       <SlantSeparator />
       <ResultsSection />
       <DifferencesSection />
-      {/* <UpdatesSection />
-      <StartBuilding /> */}
+      <UpdatesSection />
+      <StartBuilding />
     </div>
   );
 }
