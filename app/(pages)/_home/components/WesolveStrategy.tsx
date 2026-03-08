@@ -16,17 +16,17 @@ export function WesolveStrategy() {
            </div>
 
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-iris-teal p-8 md:p-5 lg:p-12 min-h-[320px] md:min-h-[200px] lg:min-h-[320px] flex flex-col justify-between text-white">
+              <div className="bg-iris-cream p-8 md:p-5 lg:p-12 min-h-[320px] md:min-h-[200px] lg:min-h-[320px] flex flex-col justify-between text-iris-teal">
                  <span className="text-[56px] font-serif tracking-tighter">20 yrs</span>
-                 <p className="text-sm text-white">trained on 20 years of data</p>
+                 <p className="text-sm">trained on 20 years of data</p>
               </div>
-              <div className="bg-iris-dark p-8 md:p-5 lg:p-12 min-h-[320px] md:min-h-[200px] lg:min-h-[320px] flex flex-col justify-between text-white">
+              <div className="bg-iris-cream p-8 md:p-5 lg:p-12 min-h-[320px] md:min-h-[200px] lg:min-h-[320px] flex flex-col justify-between text-iris-teal">
                  <span className="text-[56px] font-serif tracking-tighter">300%</span>
-                 <p className="text-sm text-white">Organic traffic up</p>
+                 <p className="text-sm ">Organic traffic up</p>
               </div>
-              <div className="bg-iris-orange p-8 md:p-5 lg:p-12 min-h-[320px] md:min-h-[200px] lg:min-h-[320px] flex flex-col justify-between text-white">
+              <div className="bg-iris-cream p-8 md:p-5 lg:p-12 min-h-[320px] md:min-h-[200px] lg:min-h-[320px] flex flex-col justify-between text-iris-teal">
                  <span className="text-[56px] font-serif tracking-tighter">1290</span>
-                 <p className="text-sm text-white">of another stat</p>
+                 <p className="text-sm ">of another stat</p>
               </div>
            </div>
         </div>
