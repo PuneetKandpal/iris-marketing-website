@@ -78,10 +78,10 @@ export function DifferencesSection() {
               How we&apos;re different
             </h2>
 
-            <div className="mt-10 flex flex-col lg:flex-row gap-16 items-start -ml-8">
+            <div className="mt-10 flex flex-col lg:flex-row gap-16 items-start lg:items-stretch -ml-8">
               
               {/* LEFT SIDE */}
-              <div className="w-full lg:w-1/2 border-l-2 border-iris-border">
+              <div className="w-full lg:w-1/2 border-l-2 border-iris-border flex flex-col">
                 {differences.map((item, index) => (
                   <button
                     key={item.title}
@@ -104,8 +104,8 @@ export function DifferencesSection() {
               </div>
 
               {/* RIGHT SIDE */}
-              <div className="w-full lg:w-1/2 sticky top-24">
-                <div className="relative aspect-4/3 w-full overflow-hidden">
+              <div className="w-full lg:w-1/2 lg:self-stretch overflow-hidden">
+                <div className="relative w-full h-full min-h-[360px] overflow-hidden">
                   <Image
                     src={differences[activeIndex].backgroundImage ?? "/images/img-17.png"}
                     alt=""
@@ -113,11 +113,9 @@ export function DifferencesSection() {
                     className="object-cover"
                   />
 
-                  <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/10 to-white/70" />
-
-                  <div className="relative z-10 flex h-full w-full items-end justify-center px-6 pb-0 md:px-10 lg:px-14">
+                  <div className="relative z-10 flex h-full w-full items-start justify-center px-8 pt-10 pb-6 md:px-12 lg:px-16">
                     {differences[activeIndex].image ? (
-                      <div className="w-full max-w-[520px] drop-shadow-2xl">
+                      <div className="w-full max-w-[620px] overflow-hidden rounded-[28px] drop-shadow-2xl">
                         <Image
                           src={differences[activeIndex].image}
                           alt={differences[activeIndex].title}
