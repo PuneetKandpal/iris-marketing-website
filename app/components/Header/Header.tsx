@@ -2,15 +2,29 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { X, Menu } from "lucide-react";
 import { Button, ContainerFluid } from "@/app/components/ui";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const navItems = ["Platform", "Pricing", "Blog", "About"];
+  const navItems = [
+    { name: "Platform", href: "/platform" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Resources", href: "/resources" },
+    { name: "About", href: "/about" },
+  ];
+
+  const getNavClasses = (href: string) => {
+    const isActive = pathname === href || pathname.startsWith(`${href}/`);
+    return `text-sm font-camera-plain-regular transition-colors ${
+      isActive ? "text-iris-orange" : "text-iris-dark hover:text-iris-orange"
+    }`;
+  };
 
   return (
     <header className="w-full border-b border-iris-cream bg-white sticky top-0 z-50">
@@ -26,11 +40,11 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
             <Link
-              key={item}
-              href={`/${item.toLowerCase()}`}
-              className="text-sm text-iris-dark hover:text-iris-orange transition-colors font-camera-plain-regular"
+              key={item.name}
+              href={item.href}
+              className={getNavClasses(item.href)}
             >
-              {item}
+              {item.name}
             </Link>
           ))}
         </nav>
@@ -61,12 +75,16 @@ export function Header() {
           <div className="flex flex-col items-start justify-center h-full px-10 gap-8">
             {navItems.map((item) => (
               <Link
-                key={item}
-                href={`/${item.toLowerCase()}`}
+                key={item.name}
+                href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-4xl font-serif text-iris-dark hover:opacity-70 transition-opacity"
+                className={`text-4xl font-serif transition-opacity ${
+                  pathname === item.href || pathname.startsWith(`${item.href}/`)
+                    ? "text-iris-orange"
+                    : "text-iris-dark hover:opacity-70"
+                }`}
               >
-                {item}
+                {item.name}
               </Link>
             ))}
             
