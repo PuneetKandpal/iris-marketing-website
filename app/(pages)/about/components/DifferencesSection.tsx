@@ -73,7 +73,7 @@ export function DifferencesSection() {
     <Section className="bg-white border-b border-iris-cream">
       <ContainerFluid className="px-6 sm:px-10">
         <div className="border-x border-iris-cream">
-          <div className="px-8 pt-20 pb-8 md:pt-24 md:pb-10">
+          <div className="px-8 pt-20 pb-0 md:pt-24">
             <h2 className="font-serif text-[40px] leading-none tracking-tight text-iris-dark md:text-[56px]">
               How we&apos;re different
             </h2>
